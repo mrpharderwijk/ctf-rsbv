@@ -47,5 +47,3 @@ next-env.d.ts
 .idea/vcs.xml
 
 *storybook.log
-
-.npmrc
