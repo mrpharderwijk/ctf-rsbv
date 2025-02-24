@@ -114,4 +114,4 @@ export const lineHeightVariants = {
     '2xl': 'xl:leading-2xl',
     '3xl': 'xl:leading-3xl',
   },
-};
+}

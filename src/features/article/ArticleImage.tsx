@@ -1,20 +1,23 @@
-'use client';
+'use client'
 
-import { useContentfulInspectorMode } from '@contentful/live-preview/react';
-import { twMerge } from 'tailwind-merge';
+import { twMerge } from 'tailwind-merge'
+import { useContentfulInspectorMode } from '@contentful/live-preview/react'
 
-import { CtfImage } from '@/features/contentful/components/contentful-image/contentful-image';
-import { ComponentRichImage } from '@/lib/__generated/sdk';
+import { CtfImage } from '@/features/contentful/components/contentful-image/contentful-image'
+import { ComponentRichImage } from '@/lib/__generated/sdk'
 
 interface ArticleImageProps {
-  image: ComponentRichImage;
+  image: ComponentRichImage
 }
 
 export const ArticleImage = ({ image }: ArticleImageProps) => {
-  const inspectorProps = useContentfulInspectorMode({ entryId: image.sys.id });
+  const inspectorProps = useContentfulInspectorMode({ entryId: image.sys.id })
   return image.image ? (
     <figure>
-      <div className="flex justify-center" {...inspectorProps({ fieldId: 'image' })}>
+      <div
+        className="flex justify-center"
+        {...inspectorProps({ fieldId: 'image' })}
+      >
         <CtfImage
           nextImageProps={{
             className: twMerge(
@@ -28,10 +31,13 @@ export const ArticleImage = ({ image }: ArticleImageProps) => {
         />
       </div>
       {image.caption && (
-        <figcaption className="mt-4" {...inspectorProps({ fieldId: 'caption' })}>
+        <figcaption
+          className="mt-4"
+          {...inspectorProps({ fieldId: 'caption' })}
+        >
           {image.caption}
         </figcaption>
       )}
     </figure>
-  ) : null;
-};
+  ) : null
+}

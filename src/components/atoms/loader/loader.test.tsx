@@ -1,20 +1,19 @@
-import { describe, expect, it } from 'vitest';
-import { render, screen } from '@testing-library/react';
+import { render, screen } from '@testing-library/react'
 
-import { Loader } from './loader';
+import { Loader } from './loader'
 
 describe('Loader', () => {
   it('renders the loader', () => {
-    render(<Loader />);
+    render(<Loader />)
 
-    const loader = screen.getByLabelText('Loading...');
-    expect(loader).toBeInTheDocument();
-  });
+    const loader = screen.getByLabelText('Loading...')
+    expect(loader).toBeInTheDocument()
+  })
 
   it('has the correct default styles', () => {
-    render(<Loader />);
+    render(<Loader />)
 
-    const loader = screen.getByLabelText('Loading...');
+    const loader = screen.getByLabelText('Loading...')
     expect(loader).toHaveClass(
       'absolute',
       'top-0',
@@ -27,8 +26,8 @@ describe('Loader', () => {
       'border-t-white',
       'rounded-full',
       'animate-spin',
-    );
-  });
+    )
+  })
 
   describe('sizes', () => {
     it.each([
@@ -38,51 +37,51 @@ describe('Loader', () => {
     ] as const)(
       'renders $size size with correct classes',
       ({ size, expectedClass }) => {
-        render(<Loader size={size} />);
+        render(<Loader size={size} />)
 
-        const loader = screen.getByLabelText('Loading...');
-        const [widthClass, heightClass] = expectedClass.split(' ');
-        expect(loader).toHaveClass(widthClass, heightClass);
+        const loader = screen.getByLabelText('Loading...')
+        const [widthClass, heightClass] = expectedClass.split(' ')
+        expect(loader).toHaveClass(widthClass, heightClass)
       },
-    );
+    )
 
     it('uses md size as default', () => {
-      render(<Loader />);
+      render(<Loader />)
 
-      const loader = screen.getByLabelText('Loading...');
-      expect(loader).toHaveClass('w-8', 'h-8');
-    });
-  });
+      const loader = screen.getByLabelText('Loading...')
+      expect(loader).toHaveClass('w-8', 'h-8')
+    })
+  })
 
   it('is positioned absolutely for proper centering', () => {
-    render(<Loader />);
+    render(<Loader />)
 
-    const loader = screen.getByLabelText('Loading...');
-    expect(loader).toHaveClass('absolute');
+    const loader = screen.getByLabelText('Loading...')
+    expect(loader).toHaveClass('absolute')
     expect(loader).toHaveClass(
       'top-0',
       'left-0',
       'right-0',
       'bottom-0',
       'm-auto',
-    );
-  });
+    )
+  })
 
   it('has proper animation class', () => {
-    render(<Loader />);
+    render(<Loader />)
 
-    const loader = screen.getByLabelText('Loading...');
-    expect(loader).toHaveClass('animate-spin');
-  });
+    const loader = screen.getByLabelText('Loading...')
+    expect(loader).toHaveClass('animate-spin')
+  })
 
   it('has proper border styles for the spinner effect', () => {
-    render(<Loader />);
+    render(<Loader />)
 
-    const loader = screen.getByLabelText('Loading...');
+    const loader = screen.getByLabelText('Loading...')
     expect(loader).toHaveClass(
       'border-4',
       'border-transparent',
       'border-t-white',
-    );
-  });
-});
+    )
+  })
+})

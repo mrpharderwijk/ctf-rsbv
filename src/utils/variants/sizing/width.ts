@@ -287,4 +287,4 @@ export const widthVariants = {
     max: 'lg:w-max',
     fit: 'lg:w-fit',
   },
-};
+}

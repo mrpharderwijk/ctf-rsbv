@@ -5,4 +5,4 @@ export const backgroundColorVariants = {
     'gray-100': 'bg-gray-100',
     transparent: 'bg-transparent',
   },
-};
+}

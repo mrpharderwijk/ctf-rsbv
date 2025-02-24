@@ -1,13 +1,13 @@
-const dotenv = require('dotenv').config();
-const nextComposePlugins = require('next-compose-plugins');
+const dotenv = require('dotenv').config()
+const nextComposePlugins = require('next-compose-plugins')
 
-const headers = require('./config/headers');
-const plugins = require('./config/plugins');
+const headers = require('./config/headers')
+const plugins = require('./config/plugins')
 
 /**
  * https://github.com/cyrilwanner/next-compose-plugins/issues/59
  */
-const { withPlugins } = nextComposePlugins.extend(() => ({}));
+const { withPlugins } = nextComposePlugins.extend(() => ({}))
 
 /**
  * Next config
@@ -74,8 +74,8 @@ module.exports = withPlugins(plugins, {
     config.module.rules.push({
       test: /\.svg$/,
       use: ['@svgr/webpack'],
-    });
+    })
 
-    return config;
+    return config
   },
-});
+})

@@ -47,4 +47,4 @@ export const borderColorVariants = {
     'gray-850': 'lg:border-gray-850',
     'gray-900': 'lg:border-gray-900',
   },
-};
+}

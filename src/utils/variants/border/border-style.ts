@@ -43,4 +43,4 @@ export const borderStyleVariants = {
     inset: 'lg:border-inset',
     outset: 'lg:border-outset',
   },
-};
+}

@@ -1,14 +1,18 @@
-import { HTMLProps } from 'react';
-import { twMerge } from 'tailwind-merge';
+import { HTMLProps } from 'react'
+import { twMerge } from 'tailwind-merge'
 
-import { ArticleTile } from '@/features/article/article-tile-grid/components/article-tile/article-tile';
-import { PageBlogPostFieldsFragment } from '@/lib/__generated/sdk';
+import { ArticleTile } from '@/features/article/article-tile-grid/components/article-tile/article-tile'
+import { PageBlogPostFieldsFragment } from '@/lib/__generated/sdk'
 
 interface ArticleTileGridProps extends HTMLProps<HTMLDivElement> {
-  articles?: Array<PageBlogPostFieldsFragment | null>;
+  articles?: Array<PageBlogPostFieldsFragment | null>
 }
 
-export const ArticleTileGrid = ({ articles, className, ...props }: ArticleTileGridProps) => {
+export const ArticleTileGrid = ({
+  articles,
+  className,
+  ...props
+}: ArticleTileGridProps) => {
   return articles && articles.length > 0 ? (
     <div
       className={twMerge(
@@ -18,8 +22,8 @@ export const ArticleTileGrid = ({ articles, className, ...props }: ArticleTileGr
       {...props}
     >
       {articles.map((article, index) => {
-        return article ? <ArticleTile key={index} article={article} /> : null;
+        return article ? <ArticleTile key={index} article={article} /> : null
       })}
     </div>
-  ) : null;
-};
+  ) : null
+}

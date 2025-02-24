@@ -1,1 +1,1 @@
-export * from './button-wrapper';
+export * from './button-wrapper'

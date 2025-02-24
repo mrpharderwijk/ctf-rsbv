@@ -1,22 +1,14 @@
-import classNames from 'classnames';
-import { MouseEvent, PropsWithChildren, ReactElement } from 'react';
-import { IconType } from 'react-icons';
+import clsx from 'clsx'
+import { MouseEvent, PropsWithChildren, ReactElement } from 'react'
+import { IconType } from 'react-icons'
 
-import {
-  strokeColorDefaultClassNames,
-  strokeLinkColorPrimaryClassNames,
-  textColorDefaultClassNames,
-  textColorGrayClassNames,
-  textLinkColorPrimaryClassNames,
-  transitionColorClassNames,
-} from '../../../../../utils';
 import {
   buttonGrayClassNames,
   buttonGrayHoverClassNames,
   buttonPrimaryClassNames,
-} from '../../class-names';
+} from '../../button.class-names'
 
-export const TID_BUTTON_LOADER = 'button__loader';
+export const TID_BUTTON_LOADER = 'button__loader'
 
 export type ButtonContentProps = PropsWithChildren<{
   variant?:
@@ -27,14 +19,14 @@ export type ButtonContentProps = PropsWithChildren<{
     | 'gray'
     | 'gray-link'
     | 'gray-hover'
-    | 'outline';
-  icon?: IconType;
-  isLoading?: boolean;
-  noPadding?: boolean;
-  onClick?: (e: MouseEvent<HTMLButtonElement>) => void;
-  outline?: boolean;
-  size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
-}>;
+    | 'outline'
+  icon?: IconType
+  isLoading?: boolean
+  noPadding?: boolean
+  onClick?: (e: MouseEvent<HTMLButtonElement>) => void
+  outline?: boolean
+  size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl'
+}>
 
 export function ButtonContent({
   children,
@@ -45,17 +37,12 @@ export function ButtonContent({
   outline,
   size = 'md',
 }: ButtonContentProps): ReactElement {
-  // disabled:opacity-70 disabled:cursor-not-allowed
-  const wrapperClassNames = classNames(
+  const wrapperClassNames = clsx(
     'relative flex flex-row items-center justify-center overflow-hidden',
-    transitionColorClassNames,
 
     // Text color
     {
-      [textColorDefaultClassNames]: variant === 'gray',
-      [textColorGrayClassNames]: variant === 'gray-link',
       'text-white': variant === 'primary',
-      [textLinkColorPrimaryClassNames]: variant === 'primary-link',
       'text-black': variant === 'outline',
       'text-zinc-50 disabled:text-secondary-700': variant === 'secondary',
       'text-zinc-50 disabled:text-tertiary-700': variant === 'tertiary',
@@ -93,7 +80,7 @@ export function ButtonContent({
       rounded: size === 'xs' || size === 'sm',
       'rounded-md': size === 'md' || size === 'lg' || size === 'xl',
     },
-  );
+  )
 
   return (
     <div className={wrapperClassNames}>
@@ -113,11 +100,8 @@ export function ButtonContent({
           size={16}
           color="red"
           stroke="red"
-          className={classNames('mr-1 flex-auto', {
-            [`${strokeColorDefaultClassNames}`]: variant === 'gray',
-            [`${strokeColorDefaultClassNames}`]: variant === 'gray-hover',
+          className={clsx('mr-1 flex-auto', {
             'stroke-white': variant === 'primary',
-            [`${strokeLinkColorPrimaryClassNames}`]: variant === 'primary-link',
             'stroke-black': variant === 'outline',
             'stroke-zinc-50 disabled:stroke-secondary-700':
               variant === 'secondary',
@@ -128,5 +112,5 @@ export function ButtonContent({
       )}
       <div className="flex-initial">{children}</div>
     </div>
-  );
+  )
 }

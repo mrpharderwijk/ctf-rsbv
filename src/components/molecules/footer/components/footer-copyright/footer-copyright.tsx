@@ -1,13 +1,15 @@
-import { ReactElement } from "react";
+import { ReactElement } from 'react'
 
-import { Box } from "@/components/atoms/box/box";
+import { Box } from '@/components/atoms/layout/box/box'
 
 export function FooterCopyright(): ReactElement {
-  const currentYear = new Date().getFullYear();
+  const currentYear = new Date().getFullYear()
 
   return (
     <Box display="flex" flexDirection="col">
-      <span className="">&copy; {currentYear} Whatever, All Rights Reserved</span>
+      <span className="">
+        &copy; {currentYear} Whatever, All Rights Reserved
+      </span>
       <div className="">
         <ul>
           <li>Privacy</li>
@@ -16,5 +18,5 @@ export function FooterCopyright(): ReactElement {
         </ul>
       </div>
     </Box>
-  );
+  )
 }

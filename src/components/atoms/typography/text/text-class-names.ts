@@ -1,7 +1,21 @@
-import { cva } from "class-variance-authority";
+import { cva } from 'class-variance-authority'
 
-import { fontSizeVariants, fontWeightVariants, letterSpacingVariants, lineClampVariants, lineHeightVariants, textAlignVariants, textDecorationVariants, textIndentVariants, textOverflowVariants, textTransformVariants, textWrapVariants, verticalAlignVariants, whiteSpaceVariants } from "@/utils/variants";
-import { textColorVariants } from "@/utils/variants/typography/text-color";
+import {
+  fontSizeVariants,
+  fontWeightVariants,
+  letterSpacingVariants,
+  lineClampVariants,
+  lineHeightVariants,
+  textAlignVariants,
+  textDecorationVariants,
+  textIndentVariants,
+  textOverflowVariants,
+  textTransformVariants,
+  textWrapVariants,
+  verticalAlignVariants,
+  whiteSpaceVariants,
+} from '@/utils/variants'
+import { textColorVariants } from '@/utils/variants/typography/text-color'
 
 export const textClassNames = cva('', {
   variants: {
@@ -20,4 +34,4 @@ export const textClassNames = cva('', {
     ...verticalAlignVariants,
     ...whiteSpaceVariants,
   },
-});
+})

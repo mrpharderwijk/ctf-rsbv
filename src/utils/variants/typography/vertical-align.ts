@@ -49,4 +49,4 @@ export const verticalAlignVariants = {
     sub: 'xl:align-sub',
     super: 'xl:align-super',
   },
-};
+}

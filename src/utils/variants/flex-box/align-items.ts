@@ -27,4 +27,4 @@ export const alignItemsVariants = {
     baseline: 'lg:items-baseline',
     stretch: 'lg:items-stretch',
   },
-};
+}

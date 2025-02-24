@@ -1,13 +1,15 @@
-import { cva, VariantProps } from 'class-variance-authority';
-import { PropsWithChildren, ReactElement } from 'react';
+import { VariantProps } from 'class-variance-authority'
+import { PropsWithChildren, ReactElement } from 'react'
 
-import { Text } from '@/components/atoms/typography/text/text';
-import { textClassNames } from '@/components/atoms/typography/text/text-class-names';
-import { PropsWithTestId, TextElementTag } from '@/types';
+import { Text } from '@/components/atoms/typography/text/text'
+import { textClassNames } from '@/components/atoms/typography/text/text-class-names'
+import { PropsWithTestId, TextElementTag } from '@/types'
 
 type BodyProps = PropsWithChildren<
-  PropsWithTestId<VariantProps<typeof textClassNames> & { tag?: TextElementTag }>
->;
+  PropsWithTestId<
+    VariantProps<typeof textClassNames> & { tag?: TextElementTag }
+  >
+>
 
 export function Body({
   tag = 'p',
@@ -19,7 +21,7 @@ export function Body({
     <Text tag={tag} data-testid={testId} {...bodyProps}>
       {children}
     </Text>
-  );
+  )
 }
 
 // → Hero heading font size / line height combos:

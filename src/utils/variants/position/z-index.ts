@@ -55,4 +55,4 @@ export const zIndexVariants = {
     100: 'lg:z-100',
     auto: 'lg:z-auto',
   },
-};
+}

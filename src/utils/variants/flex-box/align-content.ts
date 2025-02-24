@@ -31,4 +31,4 @@ export const alignContentVariants = {
     around: 'lg:content-around',
     stretch: 'lg:content-stretch',
   },
-};
+}

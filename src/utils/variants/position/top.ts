@@ -179,4 +179,4 @@ export const topVariants = {
     '3/4': 'lg:top-3/4',
     full: 'lg:top-full',
   },
-};
+}

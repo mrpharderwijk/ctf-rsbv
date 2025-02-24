@@ -1,35 +1,32 @@
-import classNames from 'classnames';
-import { ReactElement, Ref, useMemo } from 'react';
-import { IconType } from 'react-icons';
+import clsx from 'clsx'
+import { ReactElement, Ref, useMemo } from 'react'
+import { IconType } from 'react-icons'
 
-import {
-  getIconSize,
-  IconSizesType,
-  textColorDefaultClassNames,
-} from '../../../../utils';
 import {
   buttonGrayClassNames,
   buttonGrayHoverClassNames,
   buttonPrimaryClassNames,
-} from '../class-names';
+} from '../button.class-names'
+
+import { getIconSize, IconSizesType } from '@/utils/icon-sizes/icon-sizes'
 
 type ButtonUiProps = {
-  ['data-testid']?: string;
-  forwardRef?: Ref<HTMLButtonElement>;
-  icon: IconType;
-  iconSize?: number;
-  onClick?: () => void;
-  screenReaderText?: string;
-  size?: IconSizesType;
-  type?: 'button' | 'submit';
+  ['data-testid']?: string
+  forwardRef?: Ref<HTMLButtonElement>
+  icon: IconType
+  iconSize?: number
+  onClick?: () => void
+  screenReaderText?: string
+  size?: IconSizesType
+  type?: 'button' | 'submit'
   variant?:
     | 'primary'
     | 'secondary'
     | 'tertiary'
     | 'gray'
     | 'gray-hover'
-    | 'transparent';
-};
+    | 'transparent'
+}
 
 export function ButtonUi({
   'data-testid': dataTestid,
@@ -42,7 +39,7 @@ export function ButtonUi({
   type = 'button',
   variant = 'gray',
 }: ButtonUiProps): ReactElement {
-  const buttonClassNames = classNames(
+  const buttonClassNames = clsx(
     'flex items-center justify-center rounded-md',
     {
       'p-1': size === 'xs',
@@ -50,18 +47,15 @@ export function ButtonUi({
       'h-12 w-12 p-3': size === 'lg',
     },
     {
-      [`${textColorDefaultClassNames} ${buttonGrayClassNames}`]:
-        variant === 'gray',
-      [`${textColorDefaultClassNames} ${buttonGrayHoverClassNames}`]:
-        variant === 'gray-hover',
+      [`${buttonGrayClassNames}`]: variant === 'gray',
+      [`${buttonGrayHoverClassNames}`]: variant === 'gray-hover',
       [`text-white ${buttonPrimaryClassNames}`]: variant === 'primary',
-      [`${textColorDefaultClassNames} bg-transparent`]:
-        variant === 'transparent',
+      [`bg-transparent`]: variant === 'transparent',
     },
-  );
+  )
   const dynamicIconSize = useMemo(() => {
-    return !iconSize ? getIconSize(size) : iconSize;
-  }, [size, iconSize]);
+    return !iconSize ? getIconSize(size) : iconSize
+  }, [size, iconSize])
 
   return (
     <button
@@ -76,5 +70,5 @@ export function ButtonUi({
       )}
       {Icon && <Icon size={dynamicIconSize} aria-hidden="true" />}
     </button>
-  );
+  )
 }

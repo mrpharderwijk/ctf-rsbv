@@ -54,4 +54,4 @@ export const fontWeightVariants = {
     extrabold: 'xl:font-extrabold',
     black: 'xl:font-black',
   },
-};
+}

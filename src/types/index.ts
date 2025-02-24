@@ -1,5 +1,5 @@
 export type ElementTag = {
-  as?:
+  tag?:
     | 'div'
     | 'span'
     | 'section'
@@ -7,8 +7,8 @@ export type ElementTag = {
     | 'header'
     | 'footer'
     | 'main'
-    | 'article';
-};
+    | 'article'
+}
 
 export type TextElementTag =
   | 'span'
@@ -19,8 +19,8 @@ export type TextElementTag =
   | 'h4'
   | 'h5'
   | 'h6'
-  | 'label';
+  | 'label'
 
 export type PropsWithTestId<T = unknown> = T & {
-  'data-testid'?: string;
-};
+  'data-testid'?: string
+}

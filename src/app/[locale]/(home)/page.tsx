@@ -1,59 +1,66 @@
-import type { Metadata } from 'next';
-import { draftMode } from 'next/headers';
-import { notFound } from 'next/navigation';
+import type { Metadata } from 'next'
+import { draftMode } from 'next/headers'
+import { notFound } from 'next/navigation'
 
-import { Container } from '@/components/atoms/container/container';
-import { Divider } from '@/components/atoms/divider/divider';
-import { ArticleHero } from '@/features/article/article-hero/article-hero';
-import { ArticleTileGrid } from '@/features/article/article-tile-grid/article-tile-grid';
-import { defaultLocale, locales } from '@/features/i18n/utils/config';
-import { initTranslations } from '@/features/i18n/utils/init-translations';
-import { PageBlogPostOrder } from '@/lib/__generated/sdk';
-import { client, previewClient } from '@/lib/client';
+import { Container } from '@/components/atoms/layout/container/container'
+import { Divider } from '@/components/atoms/layout/divider/divider'
+import { ArticleHero } from '@/features/article/article-hero/article-hero'
+import { ArticleTileGrid } from '@/features/article/article-tile-grid/article-tile-grid'
+import { defaultLocale, locales } from '@/features/i18n/utils/config'
+import { initTranslations } from '@/features/i18n/utils/init-translations'
+import { PageBlogPostOrder } from '@/lib/__generated/sdk'
+import { client, previewClient } from '@/lib/client'
+import { NextPageProps } from '@/types/next-page-props'
 
-interface LandingPageProps {
-  params: {
-    locale: string;
-  };
-}
+export type LandingPageProps = NextPageProps<unknown>
 
-export async function generateMetadata({ params }: LandingPageProps): Promise<Metadata> {
-  const { isEnabled: preview } = await draftMode();
-  const gqlClient = preview ? previewClient : client;
-  const landingPageData = await gqlClient.pageLanding({ locale: params.locale, preview });
-  const page = landingPageData.pageLandingCollection?.items[0];
+export async function generateMetadata({
+  params,
+}: LandingPageProps): Promise<Metadata> {
+  const resolvedParams = await params
+  const { isEnabled: preview } = await draftMode()
+  const gqlClient = preview ? previewClient : client
+  const landingPageData = await gqlClient.pageLanding({
+    locale: resolvedParams.locale,
+    preview,
+  })
+  const page = landingPageData.pageLandingCollection?.items[0]
 
   const languages = Object.fromEntries(
-    locales.map(locale => [locale, locale === defaultLocale ? '/' : `/${locale}`]),
-  );
+    locales.map((locale) => [
+      locale,
+      locale === defaultLocale ? '/' : `/${locale}`,
+    ]),
+  )
   const metadata: Metadata = {
     alternates: {
       canonical: '/',
       languages: languages,
     },
-  };
+  }
   if (page?.seoFields) {
-    metadata.title = page.seoFields.pageTitle;
-    metadata.description = page.seoFields.pageDescription;
+    metadata.title = page.seoFields.pageTitle
+    metadata.description = page.seoFields.pageDescription
     metadata.robots = {
       follow: !page.seoFields.nofollow,
       index: !page.seoFields.noindex,
-    };
+    }
   }
 
-  return metadata;
+  return metadata
 }
 
-export default async function Page({ params: { locale } }: LandingPageProps) {
-  const { isEnabled: preview } = await draftMode();
-  const { t, resources } = await initTranslations({ locale });
-  const gqlClient = preview ? previewClient : client;
+export default async function Page({ params }: NextPageProps<unknown>) {
+  const { locale } = await params
+  const { isEnabled: preview } = await draftMode()
+  const { t } = await initTranslations({ locale })
+  const gqlClient = preview ? previewClient : client
 
-  const landingPageData = await gqlClient.pageLanding({ locale, preview });
-  const page = landingPageData.pageLandingCollection?.items[0];
+  const landingPageData = await gqlClient.pageLanding({ locale, preview })
+  const page = landingPageData.pageLandingCollection?.items[0]
 
   if (!page) {
-    notFound();
+    notFound()
   }
 
   const blogPostsData = await gqlClient.pageBlogPostCollection({
@@ -64,11 +71,11 @@ export default async function Page({ params: { locale } }: LandingPageProps) {
       slug_not: page?.featuredBlogPost?.slug,
     },
     preview,
-  });
-  const posts = blogPostsData.pageBlogPostCollection?.items;
+  })
+  const posts = blogPostsData.pageBlogPostCollection?.items
 
   if (!page?.featuredBlogPost || !posts) {
-    return;
+    return
   }
 
   return (
@@ -92,9 +99,9 @@ export default async function Page({ params: { locale } }: LandingPageProps) {
       <section>
         <Container className="my-8 md:mb-10 lg:mb-16">
           <h2 className="mb-4 md:mb-6">{t('landingPage.latestArticles')}</h2>
-          <ArticleTileGrid articles={posts.slice(0,4)} />
+          <ArticleTileGrid articles={posts.slice(0, 4)} />
         </Container>
       </section>
     </>
-  );
+  )
 }

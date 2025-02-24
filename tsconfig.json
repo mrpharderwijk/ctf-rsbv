@@ -24,6 +24,9 @@
       ],
       "@icons/*": [
         "./public/assets/svg/*"
+      ],
+      "@/storybook/*": [
+        "./.storybook/*"
       ]
     },
     "typeRoots": [
@@ -43,6 +46,9 @@
       {
         "name": "next"
       }
+    ],
+    "types": [
+      "node"
     ]
   },
   "exclude": [

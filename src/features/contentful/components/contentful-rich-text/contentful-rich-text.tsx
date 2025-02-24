@@ -1,51 +1,56 @@
-import { documentToReactComponents, Options } from '@contentful/rich-text-react-renderer';
-import { BLOCKS, Document } from '@contentful/rich-text-types';
+import {
+  documentToReactComponents,
+  Options,
+} from '@contentful/rich-text-react-renderer'
+import { BLOCKS, Document } from '@contentful/rich-text-types'
 
-import { ArticleImage } from '@/features/article/ArticleImage';
-import { ComponentRichImage } from '@/lib/__generated/sdk';
+import { ArticleImage } from '@/features/article/ArticleImage'
+import { ComponentRichImage } from '@/lib/__generated/sdk'
 
-export type EmbeddedEntryType = ComponentRichImage | null;
+export type EmbeddedEntryType = ComponentRichImage | null
 
 export type ContentfulRichTextInterface = {
-  json: Document;
+  json: Document
   links?:
     | {
         entries: {
-          block: Array<EmbeddedEntryType>;
-        };
+          block: Array<EmbeddedEntryType>
+        }
       }
-    | any;
+    | any
 }
 
 export const EmbeddedEntry = (entry: EmbeddedEntryType) => {
   switch (entry?.__typename) {
     case 'ComponentRichImage':
-      return <ArticleImage image={entry} />;
+      return <ArticleImage image={entry} />
     default:
-      return null;
+      return null
   }
-};
+}
 
-export const contentfulBaseRichTextOptions = ({ links }: ContentfulRichTextInterface): Options => ({
+export const contentfulBaseRichTextOptions = ({
+  links,
+}: ContentfulRichTextInterface): Options => ({
   renderNode: {
-    [BLOCKS.EMBEDDED_ENTRY]: node => {
+    [BLOCKS.EMBEDDED_ENTRY]: (node) => {
       const entry = links?.entries?.block?.find(
         (item: EmbeddedEntryType) => item?.sys?.id === node.data.target.sys.id,
-      );
+      )
 
-      if (!entry) return null;
+      if (!entry) return null
 
-      return <EmbeddedEntry {...entry} />;
+      return <EmbeddedEntry {...entry} />
     },
   },
-});
+})
 
 export const CtfRichText = ({ json, links }: ContentfulRichTextInterface) => {
-  const baseOptions = contentfulBaseRichTextOptions({ links, json });
+  const baseOptions = contentfulBaseRichTextOptions({ links, json })
 
   return (
     <article className="prose prose-sm max-w-none">
       {documentToReactComponents(json, baseOptions)}
     </article>
-  );
-};
+  )
+}

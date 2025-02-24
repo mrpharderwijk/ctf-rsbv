@@ -19,4 +19,4 @@ export const flexWrapVariants = {
     wrapReverse: 'lg:flex-wrap-reverse',
     nowrap: 'lg:flex-nowrap',
   },
-};
+}

@@ -91,4 +91,4 @@ export const opacityVariants = {
     95: 'lg:opacity-95',
     100: 'lg:opacity-100',
   },
-};
+}

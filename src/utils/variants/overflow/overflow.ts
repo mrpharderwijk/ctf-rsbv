@@ -83,4 +83,4 @@ export const overflowVariants = {
     visible: 'lg:overflow-y-visible',
     scroll: 'lg:overflow-y-scroll',
   },
-};
+}

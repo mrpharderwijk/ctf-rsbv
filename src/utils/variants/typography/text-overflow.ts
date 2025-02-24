@@ -24,4 +24,4 @@ export const textOverflowVariants = {
     ellipsis: 'xl:text-ellipsis',
     clip: 'xl:text-clip',
   },
-};
+}

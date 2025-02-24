@@ -324,4 +324,4 @@ export const flexBasisVariants = {
     '11/12': 'xl:basis-11/12',
     full: 'xl:basis-full',
   },
-};
+}

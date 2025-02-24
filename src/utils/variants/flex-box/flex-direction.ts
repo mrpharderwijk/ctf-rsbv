@@ -23,4 +23,4 @@ export const flexDirectionVariants = {
     col: 'lg:flex-col',
     colReverse: 'lg:flex-col-reverse',
   },
-};
+}

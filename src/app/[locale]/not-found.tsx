@@ -1,16 +1,15 @@
-import { headers } from 'next/headers';
-import Link from 'next/link';
-import { Trans } from 'react-i18next/TransWithoutContext';
+import { headers } from 'next/headers'
+import Link from 'next/link'
+import { Trans } from 'react-i18next/TransWithoutContext'
 
-import { Container } from '@/components/atoms/container/container';
-import { defaultLocale } from '@/features/i18n/utils/config';
-import { initTranslations } from '@/features/i18n/utils/init-translations';
-
+import { Container } from '@/components/atoms/layout/container/container'
+import { defaultLocale } from '@/features/i18n/utils/config'
+import { initTranslations } from '@/features/i18n/utils/init-translations'
 
 export default async function NotFound() {
-  const headersList = await headers();
-  const locale = headersList.get('x-next-i18n-router-locale') || defaultLocale;
-  const { t } = await initTranslations({ locale });
+  const headersList = await headers()
+  const locale = headersList.get('x-next-i18n-router-locale') || defaultLocale
+  const { t } = await initTranslations({ locale })
 
   return (
     <Container>
@@ -22,5 +21,5 @@ export default async function NotFound() {
         </Trans>
       </p>
     </Container>
-  );
+  )
 }

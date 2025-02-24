@@ -29,4 +29,4 @@ export const textTransformVariants = {
     capitalize: 'xl:capitalize',
     'normal-case': 'xl:normal-case',
   },
-};
+}

@@ -29,4 +29,4 @@ export const textAlignVariants = {
     center: 'xl:text-center',
     justify: 'xl:text-justify',
   },
-};
+}

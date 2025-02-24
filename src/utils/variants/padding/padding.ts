@@ -233,4 +233,4 @@ export const paddingVariants = {
     56: 'lg:py-56',
     64: 'lg:py-64',
   },
-};
+}

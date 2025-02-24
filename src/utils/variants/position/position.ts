@@ -27,4 +27,4 @@ export const positionVariants = {
     fixed: 'lg:fixed',
     sticky: 'lg:sticky',
   },
-};
+}

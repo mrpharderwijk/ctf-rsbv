@@ -27,4 +27,4 @@ export const floatVariants = {
     left: 'lg:float-left',
     none: 'lg:float-none',
   },
-};
+}

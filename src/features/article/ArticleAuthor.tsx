@@ -1,20 +1,22 @@
-'use client';
+'use client'
 
 import {
   useContentfulInspectorMode,
   useContentfulLiveUpdates,
-} from '@contentful/live-preview/react';
+} from '@contentful/live-preview/react'
 
-import { CtfImage } from '@/features/contentful/components/contentful-image/contentful-image';
-import { PageBlogPostFieldsFragment } from '@/lib/__generated/sdk';
+import { CtfImage } from '@/features/contentful/components/contentful-image/contentful-image'
+import { PageBlogPostFieldsFragment } from '@/lib/__generated/sdk'
 
 interface ArticleAuthorProps {
-  article: PageBlogPostFieldsFragment;
+  article: PageBlogPostFieldsFragment
 }
 
 export const ArticleAuthor = ({ article }: ArticleAuthorProps) => {
-  const { author } = useContentfulLiveUpdates(article);
-  const inspectorProps = useContentfulInspectorMode({ entryId: author?.sys.id });
+  const { author } = useContentfulLiveUpdates(article)
+  const inspectorProps = useContentfulInspectorMode({
+    entryId: author?.sys.id,
+  })
 
   return (
     <div className="flex items-center">
@@ -34,9 +36,12 @@ export const ArticleAuthor = ({ article }: ArticleAuthorProps) => {
           />
         )}
       </div>
-      <span className="text-xs leading-none text-gray600" {...inspectorProps({ fieldId: 'name' })}>
+      <span
+        className="text-xs leading-none text-gray600"
+        {...inspectorProps({ fieldId: 'name' })}
+      >
         {author?.name}
       </span>
     </div>
-  );
-};
+  )
+}

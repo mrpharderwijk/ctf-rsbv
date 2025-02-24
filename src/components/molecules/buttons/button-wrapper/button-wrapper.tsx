@@ -1,21 +1,18 @@
-import { PropsWithChildren, ReactElement } from 'react';
+import { PropsWithChildren, ReactElement } from 'react'
 
-import { ButtonContent, ButtonContentProps } from '../components';
+import { ButtonContent, ButtonContentProps } from '../components'
 
 type ButtonWrapperProps = PropsWithChildren<
   {
-    renderRoot: (
-      className: string,
-      buttonContent: ReactElement,
-    ) => ReactElement;
+    renderRoot: (className: string, buttonContent: ReactElement) => ReactElement
   } & ButtonContentProps
->;
+>
 
 export function ButtonWrapper({
   renderRoot,
   ...rest
 }: ButtonWrapperProps): ReactElement {
-  const className = 'button-wrapper block';
+  const className = 'button-wrapper block'
 
-  return renderRoot(className, <ButtonContent {...rest} />);
+  return renderRoot(className, <ButtonContent {...rest} />)
 }

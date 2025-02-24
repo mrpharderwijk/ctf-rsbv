@@ -19,4 +19,4 @@ export const orderVariants = {
     last: 'lg:order-last',
     none: 'lg:order-none',
   },
-};
+}

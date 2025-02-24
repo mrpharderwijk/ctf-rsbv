@@ -39,4 +39,4 @@ export const letterSpacingVariants = {
     wider: 'xl:wider',
     widest: 'xl:widest',
   },
-};
+}

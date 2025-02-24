@@ -55,4 +55,4 @@ export const flexVariants = {
     0: 'lg:flex-shrink-0',
     1: 'lg:flex-shrink',
   },
-};
+}

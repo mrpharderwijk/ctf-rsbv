@@ -1,16 +1,16 @@
-'use client';
+'use client'
 
-import Link from 'next/link';
-import { useTranslation } from 'react-i18next';
+import Link from 'next/link'
+import { useTranslation } from 'react-i18next'
 
-import { Container } from '@/components/atoms/container/container';
-import { Divider } from '@/components/atoms/divider/divider';
 // import { FooterList } from '@/components/molecules/footer/components/footer-list/footer-list';
+import { FooterCopyright } from './components/footer-copyright/footer-copyright'
 
-import { FooterCopyright } from './components/footer-copyright/footer-copyright';
+import { Container } from '@/components/atoms/layout/container/container'
+import { Divider } from '@/components/atoms/layout/divider/divider'
 
 export const Footer = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation()
 
   return (
     <footer className="border-t border-t-gray-light bg-gray-lightest pt-8 lg:pt-10">
@@ -36,5 +36,5 @@ export const Footer = () => {
         <FooterCopyright />
       </Container>
     </footer>
-  );
-};
+  )
+}

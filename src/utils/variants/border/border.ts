@@ -27,4 +27,4 @@ export const borderVariants = {
     8: 'lg:border-8',
     px: 'lg:border',
   },
-};
+}

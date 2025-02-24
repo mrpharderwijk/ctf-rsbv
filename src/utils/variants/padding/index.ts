@@ -1,1 +1,1 @@
-export * from './padding';
+export * from './padding'

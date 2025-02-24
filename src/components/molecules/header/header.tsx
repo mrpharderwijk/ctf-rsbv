@@ -1,12 +1,12 @@
-'use client';
+'use client'
 
-import { useTranslation } from 'react-i18next';
+import { useTranslation } from 'react-i18next'
 
-import { Container } from '@/components/atoms/container/container';
-import { Branding } from '@/components/molecules/branding/branding';
+import { Container } from '@/components/atoms/layout/container/container'
+import { Branding } from '@/components/molecules/branding/branding'
 
 export const Header = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation()
 
   return (
     <header className="w-full border-b border-border-gray h-20 flex items-center">
@@ -38,5 +38,5 @@ export const Header = () => {
     //     </Container>
     //   </nav>
     // </header>
-  );
-};
+  )
+}

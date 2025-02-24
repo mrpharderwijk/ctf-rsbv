@@ -179,4 +179,4 @@ export const bottomVariants = {
     '3/4': 'lg:bottom-3/4',
     full: 'lg:bottom-full',
   },
-};
+}

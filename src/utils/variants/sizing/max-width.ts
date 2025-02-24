@@ -124,4 +124,4 @@ export const maxWidthVariants = {
     'screen-xl': 'xl:max-w-screen-xl',
     'screen-2xl': 'xl:max-w-screen-2xl',
   },
-};
+}

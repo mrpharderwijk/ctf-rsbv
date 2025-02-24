@@ -31,4 +31,4 @@ export const justifyContentVariants = {
     around: 'lg:justify-around',
     evenly: 'lg:justify-evenly',
   },
-};
+}

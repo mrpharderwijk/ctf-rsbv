@@ -44,4 +44,4 @@ export const fontSizeVariants = {
     lg: 'xl:text-lg',
     xl: 'xl:text-xl',
   },
-};
+}

@@ -29,4 +29,4 @@ export const textWrapVariants = {
     balance: 'xl:text-balance',
     pretty: 'xl:text-pretty',
   },
-};
+}

@@ -35,4 +35,4 @@ export const displayVariants = {
     grid: 'lg:grid',
     inlineGrid: 'lg:inline-grid',
   },
-};
+}

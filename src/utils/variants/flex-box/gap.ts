@@ -233,4 +233,4 @@ export const gapVariants = {
     16: 'lg:gap-y-16',
     20: 'lg:gap-y-20',
   },
-};
+}

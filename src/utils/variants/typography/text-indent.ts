@@ -159,4 +159,4 @@ export const textIndentVariants = {
     80: 'xl:indent-80',
     96: 'xl:indent-96',
   },
-};
+}

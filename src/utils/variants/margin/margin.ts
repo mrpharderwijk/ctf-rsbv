@@ -703,4 +703,4 @@ export const marginVariants = {
     56: 'xl:mb-56',
     64: 'xl:mb-64',
   },
-};
+}

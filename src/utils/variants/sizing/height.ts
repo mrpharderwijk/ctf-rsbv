@@ -287,4 +287,4 @@ export const heightVariants = {
     max: 'lg:h-max',
     fit: 'lg:h-fit',
   },
-};
+}

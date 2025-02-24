@@ -39,4 +39,4 @@ export const whiteSpaceVariants = {
     'pre-wrap': 'xl:whitespace-pre-wrap',
     break: 'xl:whitespace-break-spaces',
   },
-};
+}

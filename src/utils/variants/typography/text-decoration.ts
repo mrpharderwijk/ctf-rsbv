@@ -29,4 +29,4 @@ export const textDecorationVariants = {
     'line-through': 'xl:line-through',
     'no-underline': 'xl:no-underline',
   },
-};
+}

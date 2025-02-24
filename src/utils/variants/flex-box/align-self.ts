@@ -27,4 +27,4 @@ export const alignSelfVariants = {
     center: 'lg:self-center',
     stretch: 'lg:self-stretch',
   },
-};
+}

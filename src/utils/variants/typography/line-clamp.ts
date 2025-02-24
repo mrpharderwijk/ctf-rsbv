@@ -44,4 +44,4 @@ export const lineClampVariants = {
     6: 'xl:line-clamp-6',
     none: 'xl:line-clamp-none',
   },
-};
+}
