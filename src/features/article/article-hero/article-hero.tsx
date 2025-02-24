@@ -60,8 +60,8 @@ export function ArticleHero({ article }: ArticleHeroProps): ReactElement {
       <div className="col-start-1 -col-end-1 flex flex-col justify-center gap-6 md:col-start-1 md:col-end-4 md:pr-12 lg:col-start-1 lg:col-end-6">
         <div className="flex flex-col gap-1">
           <Body
-            textColor="gray"
-            fontSize="sm"
+            color="gray"
+            size="sm"
             fontWeight="light"
             {...inspectorProps({ fieldId: 'publishedDate' })}
           >

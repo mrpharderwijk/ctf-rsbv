@@ -1,5 +1,5 @@
 export const maxWidthVariants = {
-  maxWidth: {
+  'max-w': {
     0: 'max-w-0',
     none: 'max-w-none',
     xs: 'max-w-xs',
@@ -24,7 +24,7 @@ export const maxWidthVariants = {
     'screen-xl': 'max-w-screen-xl',
     'screen-2xl': 'max-w-screen-2xl',
   },
-  'maxWidth-sm': {
+  'max-w-sm': {
     0: 'sm:max-w-0',
     none: 'sm:max-w-none',
     xs: 'sm:max-w-xs',
@@ -49,7 +49,7 @@ export const maxWidthVariants = {
     'screen-xl': 'sm:max-w-screen-xl',
     'screen-2xl': 'sm:max-w-screen-2xl',
   },
-  'maxWidth-md': {
+  'max-w-md': {
     0: 'md:max-w-0',
     none: 'md:max-w-none',
     xs: 'md:max-w-xs',
@@ -74,7 +74,7 @@ export const maxWidthVariants = {
     'screen-xl': 'md:max-w-screen-xl',
     'screen-2xl': 'md:max-w-screen-2xl',
   },
-  'maxWidth-lg': {
+  'max-w-lg': {
     0: 'lg:max-w-0',
     none: 'lg:max-w-none',
     xs: 'lg:max-w-xs',
@@ -99,7 +99,7 @@ export const maxWidthVariants = {
     'screen-xl': 'lg:max-w-screen-xl',
     'screen-2xl': 'lg:max-w-screen-2xl',
   },
-  'maxWidth-xl': {
+  'max-w-xl': {
     0: 'xl:max-w-0',
     none: 'xl:max-w-none',
     xs: 'xl:max-w-xs',
