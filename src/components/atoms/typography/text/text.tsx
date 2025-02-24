@@ -3,7 +3,6 @@ import { PropsWithChildren, ReactElement } from 'react'
 
 import { textClassNames } from '@/components/atoms/typography/text/text-class-names'
 import { PropsWithTestId, TextElementTag } from '@/types'
-import { cn } from '@/utils/class-names'
 
 export type TextProps = PropsWithChildren<
   VariantProps<typeof textClassNames> &
@@ -18,7 +17,7 @@ export function Text({
   ...textProps
 }: TextProps): ReactElement {
   const Tag = tag
-  const textClassName = cn(textClassNames({ ...textProps }))
+  const textClassName = textClassNames(textProps)
 
   return <Tag className={textClassName}>{children}</Tag>
 }

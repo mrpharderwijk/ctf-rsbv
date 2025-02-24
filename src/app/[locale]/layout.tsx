@@ -5,7 +5,7 @@ import { draftMode } from 'next/headers'
 import { PropsWithChildren } from 'react'
 
 import './globals.css'
-import { Footer } from '@/components/molecules/footer/Footer'
+import { Footer } from '@/components/molecules/footer/footer'
 import { Header } from '@/components/molecules/header/header'
 import { locales } from '@/features/i18n/utils/config'
 import { initTranslations } from '@/features/i18n/utils/init-translations'

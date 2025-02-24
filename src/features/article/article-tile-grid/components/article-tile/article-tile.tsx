@@ -52,8 +52,8 @@ export const ArticleTile = ({ article }: ArticleTileProps) => {
         <div className="flex">
           {/* <ArticleAuthor article={article} /> */}
           <Body
-            textColor="gray"
-            fontSize="sm"
+            color="gray"
+            size="sm"
             fontWeight="light"
             {...inspectorProps({ fieldId: 'publishedDate' })}
           >

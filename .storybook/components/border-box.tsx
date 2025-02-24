@@ -1,6 +1,6 @@
-import { PropsWithChildren, ReactElement } from 'react';
+import { PropsWithChildren, ReactElement } from 'react'
 
-import { Box, BoxProps } from '@/components/atoms/layout/box/box';
+import { Box, BoxProps } from '@/components/atoms/layout/box/box'
 
 type BorderBoxProps = PropsWithChildren<
   Pick<
@@ -21,7 +21,7 @@ type BorderBoxProps = PropsWithChildren<
     | 'gap'
     | 'spread'
   >
->;
+>
 
 export function BorderBox({
   children,
@@ -41,7 +41,7 @@ export function BorderBox({
     opacity = 75,
     overflow = 'hidden',
     bgColor = 'transparent',
-  } = props;
+  } = props
   return (
     <Box
       data-testid="border-box"
@@ -54,12 +54,12 @@ export function BorderBox({
       zIndex={zIndex}
       border={border}
       borderStyle={borderStyle}
-      borderColor={borderColor}
+      border-color={borderColor}
       bgColor={bgColor}
       opacity={opacity}
       overflow={overflow}
     >
       {children}
     </Box>
-  );
+  )
 }

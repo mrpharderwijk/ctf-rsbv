@@ -141,7 +141,8 @@
   --color-text-black: var(--color-gray-darkest);
   --color-text-gray: var(--color-gray-dark);
 
-  --color-border-gray: var(--color-gray-lighter);
+  --color-border-gray-lighter: var(--color-gray-lighter);
+  --color-border-gray-light: var(--color-gray-light);
 
   --container-8xl: 90rem;
 

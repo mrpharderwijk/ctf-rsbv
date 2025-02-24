@@ -1,6 +1,7 @@
 export const gapVariants = {
   gap: {
     0: 'gap-0',
+    '0.5': 'gap-0.5',
     1: 'gap-1',
     '1.5': 'gap-[0.375rem]',
     2: 'gap-2',
@@ -22,6 +23,7 @@ export const gapVariants = {
   },
   'gap-sm': {
     0: 'sm:gap-0',
+    '0.5': 'sm:gap-0.5',
     1: 'sm:gap-1',
     '1.5': 'sm:gap-[0.375rem]',
     2: 'sm:gap-2',
@@ -43,6 +45,7 @@ export const gapVariants = {
   },
   'gap-md': {
     0: 'md:gap-0',
+    '0.5': 'md:gap-0.5',
     1: 'md:gap-1',
     '1.5': 'md:gap-[0.375rem]',
     2: 'md:gap-2',
@@ -64,6 +67,7 @@ export const gapVariants = {
   },
   'gap-lg': {
     0: 'lg:gap-0',
+    '0.5': 'lg:gap-0.5',
     1: 'lg:gap-1',
     '1.5': 'lg:gap-[0.375rem]',
     2: 'lg:gap-2',
@@ -79,6 +83,7 @@ export const gapVariants = {
   },
   'gap-x': {
     0: 'gap-x-0',
+    '0.5': 'gap-x-0.5',
     1: 'gap-x-1',
     '1.5': 'gap-x-[0.375rem]',
     2: 'gap-x-2',
@@ -100,6 +105,7 @@ export const gapVariants = {
   },
   'gap-x-sm': {
     0: 'sm:gap-x-0',
+    '0.5': 'sm:gap-x-0.5',
     1: 'sm:gap-x-1',
     '1.5': 'sm:gap-x-[0.375rem]',
     2: 'sm:gap-x-2',
@@ -121,6 +127,7 @@ export const gapVariants = {
   },
   'gap-x-md': {
     0: 'md:gap-x-0',
+    '0.5': 'md:gap-x-0.5',
     1: 'md:gap-x-1',
     '1.5': 'md:gap-x-[0.375rem]',
     2: 'md:gap-x-2',
@@ -142,6 +149,7 @@ export const gapVariants = {
   },
   'gap-x-lg': {
     0: 'lg:gap-x-0',
+    '0.5': 'lg:gap-x-0.5',
     1: 'lg:gap-x-1',
     '1.5': 'lg:gap-x-[0.375rem]',
     2: 'lg:gap-x-2',
@@ -157,6 +165,7 @@ export const gapVariants = {
   },
   'gap-y': {
     0: 'gap-y-0',
+    '0.5': 'gap-y-0.5',
     1: 'gap-y-1',
     '1.5': 'gap-y-[0.375rem]',
     2: 'gap-y-2',
@@ -178,6 +187,7 @@ export const gapVariants = {
   },
   'gap-y-sm': {
     0: 'sm:gap-y-0',
+    '0.5': 'sm:gap-y-0.5',
     1: 'sm:gap-y-1',
     '1.5': 'sm:gap-y-[0.375rem]',
     2: 'sm:gap-y-2',
@@ -199,6 +209,7 @@ export const gapVariants = {
   },
   'gap-y-md': {
     0: 'md:gap-y-0',
+    '0.5': 'md:gap-y-0.5',
     1: 'md:gap-y-1',
     '1.5': 'md:gap-y-[0.375rem]',
     2: 'md:gap-y-2',
@@ -220,6 +231,7 @@ export const gapVariants = {
   },
   'gap-y-lg': {
     0: 'lg:gap-y-0',
+    '0.5': 'lg:gap-y-0.5',
     1: 'lg:gap-y-1',
     '1.5': 'lg:gap-y-[0.375rem]',
     2: 'lg:gap-y-2',

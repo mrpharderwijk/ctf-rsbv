@@ -50,10 +50,8 @@ const headingTextPropsMap = {
     fontWeight: 'semibold',
   },
   h6: {
-    fontSize: 'md',
-    'fontSize-md': 'lg',
-    'fontSize-lg': 'xl',
-    fontWeight: 'medium',
+    fontSize: 'sm',
+    fontWeight: 'semibold',
   },
 }
 

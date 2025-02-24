@@ -73,7 +73,7 @@ export const marginVariants = {
     16: 'lg:m-16',
     20: 'lg:m-20',
   },
-  marginX: {
+  'margin-x': {
     auto: 'mx-auto',
     0: 'mx-0',
     1: 'mx-1',
@@ -94,7 +94,7 @@ export const marginVariants = {
     56: 'mx-56',
     64: 'mx-64',
   },
-  'marginX-sm': {
+  'margin-x-sm': {
     auto: 'sm:mx-auto',
     0: 'sm:mx-0',
     1: 'sm:mx-1',
@@ -115,7 +115,7 @@ export const marginVariants = {
     56: 'sm:mx-56',
     64: 'sm:mx-64',
   },
-  'marginX-md': {
+  'margin-x-md': {
     auto: 'md:mx-auto',
     0: 'md:mx-0',
     1: 'md:mx-1',
@@ -136,7 +136,7 @@ export const marginVariants = {
     56: 'md:mx-56',
     64: 'md:mx-64',
   },
-  'marginX-lg': {
+  'margin-x-lg': {
     auto: 'lg:mx-auto',
     0: 'lg:mx-0',
     1: 'lg:mx-1',
@@ -157,7 +157,7 @@ export const marginVariants = {
     56: 'lg:mx-56',
     64: 'lg:mx-64',
   },
-  'marginX-xl': {
+  'margin-x-xl': {
     auto: 'xl:mx-auto',
     0: 'xl:mx-0',
     1: 'xl:mx-1',
@@ -178,7 +178,7 @@ export const marginVariants = {
     56: 'xl:mx-56',
     64: 'xl:mx-64',
   },
-  marginY: {
+  'margin-y': {
     auto: 'my-auto',
     0: 'my-0',
     1: 'my-1',
@@ -199,7 +199,7 @@ export const marginVariants = {
     56: 'my-56',
     64: 'my-64',
   },
-  'marginY-sm': {
+  'margin-y-sm': {
     auto: 'sm:my-auto',
     0: 'sm:my-0',
     1: 'sm:my-1',
@@ -220,7 +220,7 @@ export const marginVariants = {
     56: 'sm:my-56',
     64: 'sm:my-64',
   },
-  'marginY-md': {
+  'margin-y-md': {
     auto: 'md:my-auto',
     0: 'md:my-0',
     1: 'md:my-1',
@@ -241,7 +241,7 @@ export const marginVariants = {
     56: 'md:my-56',
     64: 'md:my-64',
   },
-  'marginY-lg': {
+  'margin-y-lg': {
     auto: 'lg:my-auto',
     0: 'lg:my-0',
     1: 'lg:my-1',
@@ -262,7 +262,7 @@ export const marginVariants = {
     56: 'lg:my-56',
     64: 'lg:my-64',
   },
-  'marginY-xl': {
+  'margin-y-xl': {
     auto: 'xl:my-auto',
     0: 'xl:my-0',
     1: 'xl:my-1',
