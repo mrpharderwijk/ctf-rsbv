@@ -1,10 +1,10 @@
-import { CodegenConfig } from '@graphql-codegen/cli';
+import { CodegenConfig } from '@graphql-codegen/cli'
 
-const endpointOverride = process.env.CONTENTFUL_GRAPHQL_ENDPOINT;
-const productionEndpoint = 'https://graphql.contentful.com/content/v1/spaces';
+const endpointOverride = process.env.CONTENTFUL_GRAPHQL_ENDPOINT
+const productionEndpoint = 'https://graphql.contentful.com/content/v1/spaces'
 export const endpoint = `${endpointOverride || productionEndpoint}/${
   process.env.CONTENTFUL_SPACE_ID
-}/environments/${process.env.CONTENTFUL_SPACE_ENVIRONMENT || 'master'}`;
+}/environments/${process.env.CONTENTFUL_SPACE_ENVIRONMENT || 'master'}`
 
 export const config: CodegenConfig = {
   overwrite: true,
@@ -27,7 +27,11 @@ export const config: CodegenConfig = {
     },
     'src/lib/__generated/sdk.ts': {
       documents: ['src/lib/graphql/**/*.graphql'],
-      plugins: ['typescript', 'typescript-operations', 'typescript-graphql-request'],
+      plugins: [
+        'typescript',
+        'typescript-operations',
+        'typescript-graphql-request',
+      ],
       config: {
         rawRequest: false,
         inlineFragmentTypes: 'combine',
@@ -38,6 +42,6 @@ export const config: CodegenConfig = {
       },
     },
   },
-};
+}
 
-export default config;
+export default config
