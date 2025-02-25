@@ -2,7 +2,6 @@
 
 import { useTranslation } from 'react-i18next'
 
-// import { FooterList } from '@/components/molecules/footer/components/footer-list/footer-list';
 import { FooterCopyright } from './components/footer-copyright/footer-copyright'
 
 import { Container } from '@/components/atoms/layout/container/container'
@@ -16,20 +15,6 @@ export const Footer = () => {
   return (
     <footer className="border-t border-t-gray-light bg-gray-lightest pt-8 md:pt-10 xl:pt-12">
       <Container className="flex flex-col gap-y-6">
-        {/* <h2 className="h4 mb-4">{t('footer.aboutUs')}</h2>
-        <div className="max-w-4xl">{t('footer.description')}</div> */}
-
-        {/* <div className="mt-8">
-          {t('footer.powerBy')}{' '}
-          <Link
-            href="https://www.contentful.com"
-            rel="noopener noreferrer"
-            target="_blank"
-            className="text-blue500"
-          >
-            Contentful
-          </Link>
-        </div> */}
         <div className="grid gap-y-6 grid-cols-1 xl:grid-cols-3">
           <FooterList title="Support">
             <FooterListItem>Help Center</FooterListItem>
