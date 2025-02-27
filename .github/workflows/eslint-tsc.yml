@@ -24,6 +24,10 @@ jobs:
           # node-version: "${{ steps.nvm.outputs.NVMRC }}"
           node-version: "22.8.0"
 
+      - name: Create .npmrc
+        run: echo "@mrpharderwijk:registry=https://npm.pkg.github.com/" > ~/.npmrc
+        run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
+
       - name: Get Yarn cache directory
         id: yarn-cache-dir-path
         run: echo "::set-output name=dir::$(yarn cache dir)"
