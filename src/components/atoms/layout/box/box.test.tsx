@@ -30,7 +30,6 @@ describe('Box', () => {
       expect(container).toContainHTML(
         `<${tag} class="absolute">Hello World!</${tag}>`,
       )
-      screen.debug(container)
     })
   })
 

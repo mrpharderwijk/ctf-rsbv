@@ -2,10 +2,6 @@
   "name": "rsbv",
   "version": "0.1.0",
   "private": true,
-  "engines": {
-    "node": ">=22.8.0",
-    "npm": "Please use Yarn"
-  },
   "scripts": {
     "prepare": "husky install",
     "dev": "next dev",
@@ -78,6 +74,7 @@
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.2.0",
+    "@testing-library/user-event": "^14.6.1",
     "@types/jest": "^29.5.14",
     "@types/negotiator": "^0.6.3",
     "@types/node": "18.11.9",
@@ -117,5 +114,9 @@
     "typescript": "^5.7.3",
     "typescript-eslint": "^8.24.1",
     "vite": "^6.1.1"
+  },
+  "engines": {
+    "node": ">=22.8.0",
+    "npm": "Please use Yarn"
   }
 }

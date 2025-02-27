@@ -1,5 +1,6 @@
 import { HTMLProps, ReactElement } from 'react'
-import { twMerge } from 'tailwind-merge'
+
+import { cn } from '@/utils/class-names'
 
 export function Container({
   className,
@@ -7,7 +8,7 @@ export function Container({
 }: HTMLProps<HTMLDivElement>): ReactElement {
   return (
     <div
-      className={twMerge(
+      className={cn(
         'max-w[2520px] mx-auto w-full px-6 md:px-10 lg:px-20',
         className,
       )}

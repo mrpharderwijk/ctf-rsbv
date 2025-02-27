@@ -1,7 +1,8 @@
-import clsx from 'clsx'
 import { MouseEvent, PropsWithChildren, ReactElement, Ref } from 'react'
 
 import { ButtonContent, ButtonContentProps } from './components'
+
+import { cn } from '@/utils/class-names'
 
 type ButtonProps = PropsWithChildren<
   {
@@ -26,7 +27,7 @@ export function Button({
   type = 'button',
   ...rest
 }: ButtonProps): ReactElement {
-  const buttonClassNames = clsx({
+  const buttonClassNames = cn({
     'w-full': fullWidth,
   })
 
