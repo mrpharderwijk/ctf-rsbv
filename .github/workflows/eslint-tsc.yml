@@ -21,13 +21,13 @@ jobs:
       - name: Use Node.js (.nvmrc)
         uses: actions/setup-node@v3
         with:
-          # node-version: "${{ steps.nvm.outputs.NVMRC }}"
-          node-version: "22.8.0"
+          node-version: "${{ steps.nvm.outputs.NVMRC }}"
+          # node-version: "22.8.0"
 
       - name: Create .npmrc
         run: |
           echo "@mrpharderwijk:registry=https://npm.pkg.github.com/" > ~/.npmrc
-          echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
+          echo "//npm.pkg.github.com/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
 
       - name: Get Yarn cache directory
         id: yarn-cache-dir-path
