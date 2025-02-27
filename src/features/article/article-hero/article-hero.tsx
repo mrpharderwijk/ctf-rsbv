@@ -13,15 +13,19 @@ import { Body } from '@/components/atoms/typography/body/body'
 import { Heading } from '@/components/atoms/typography/heading/heading'
 import { CtfImage } from '@/features/contentful/components/contentful-image/contentful-image'
 import { PageBlogPostFieldsFragment } from '@/lib/__generated/sdk'
+import { PropsWithTestId } from '@/types'
 
-type ArticleHeroProps = {
+type ArticleHeroProps = PropsWithTestId<{
   article: PageBlogPostFieldsFragment
   isFeatured?: boolean
   isReversedLayout?: boolean
   locale?: string
-}
+}>
 
-export function ArticleHero({ article }: ArticleHeroProps): ReactElement {
+export function ArticleHero({
+  article,
+  'data-testid': dataTestid,
+}: ArticleHeroProps): ReactElement {
   const { t } = useTranslation()
   const inspectorProps = useContentfulInspectorMode({
     entryId: article.sys.id,
@@ -29,7 +33,10 @@ export function ArticleHero({ article }: ArticleHeroProps): ReactElement {
   const { title, publishedDate, slug } = useContentfulLiveUpdates(article)
 
   return (
-    <div className="grid gap-x-1.5 gap-y-6 grid-cols-[repeat(12,1fr)] md:grid-cols-[repeat(6,1fr)] md:gap-x-6 lg:grid-cols-[repeat(12,1fr)]">
+    <div
+      className="grid gap-x-1.5 gap-y-6 grid-cols-[repeat(12,1fr)] md:grid-cols-[repeat(6,1fr)] md:gap-x-6 lg:grid-cols-[repeat(12,1fr)]"
+      data-testid={dataTestid}
+    >
       <div className="overflow-hidden rounded-xl col-start-1 -col-end-1 md:col-start-4 md:-col-end-1 md:row-start-1 lg:col-start-6 lg:-col-end-1">
         <div
           className="relative aspect-[4/3] overflow-hidden rounded-lg"
@@ -47,13 +54,6 @@ export function ArticleHero({ article }: ArticleHeroProps): ReactElement {
               />
             </Link>
           )}
-          {/* <Image
-            src="https://news.airbnb.com/wp-content/uploads/sites/4/2025/02/01-Anitta-OOA-Hero-image-Airbnb-Credit-Eduardo-Bravin.jpg"
-            alt="Carnival celebration"
-            fill
-            className="object-cover h-full w-full block"
-            priority
-          /> */}
         </div>
       </div>
 
@@ -62,7 +62,7 @@ export function ArticleHero({ article }: ArticleHeroProps): ReactElement {
           <Body
             color="gray"
             size="sm"
-            fontWeight="light"
+            fontWeight="normal"
             {...inspectorProps({ fieldId: 'publishedDate' })}
           >
             <time>

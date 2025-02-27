@@ -1,6 +1,6 @@
 import clsx from 'clsx'
 import type { Metadata, Viewport } from 'next'
-import { Raleway } from 'next/font/google'
+import { Figtree } from 'next/font/google'
 import { draftMode } from 'next/headers'
 import { PropsWithChildren } from 'react'
 
@@ -10,6 +10,7 @@ import { Header } from '@/components/molecules/header/header'
 import { locales } from '@/features/i18n/utils/config'
 import { initTranslations } from '@/features/i18n/utils/init-translations'
 import { AppProvider } from '@/providers/app-provider/app-provider'
+import { NextPageProps } from '@/types/next-page-props'
 
 export function generateMetadata(): Metadata {
   return {
@@ -25,23 +26,21 @@ export const viewport: Viewport = {
 }
 
 export async function generateStaticParams(): Promise<LayoutProps['params'][]> {
-  return locales.map((locale) => ({ locale }))
+  return locales.map((locale) => Promise.resolve({ locale }))
 }
 
-const raleway = Raleway({ subsets: ['latin'], variable: '--font-montserrat' })
+const mainFont = Figtree({ subsets: ['latin'], variable: '--main-font' })
 
 const allowedOriginList = [
   'https://app.contentful.com',
   'https://app.eu.contentful.com',
 ]
 
-export type LayoutProps = PropsWithChildren<{
-  params: { locale: string }
-}>
+export type LayoutProps = PropsWithChildren<NextPageProps<unknown>>
 
 export default async function RootLayout({ children, params }: LayoutProps) {
   const { isEnabled: preview } = await draftMode()
-  const { locale } = params
+  const { locale } = await params
   const { resources } = await initTranslations({ locale })
   const translationProviderProps = { locale, resources }
   const contentfulPreviewProviderProps = {
@@ -56,7 +55,7 @@ export default async function RootLayout({ children, params }: LayoutProps) {
   }
   const bodyClassNames = clsx(
     'font-sans min-h-screen bg-white dark:bg-zinc-900',
-    raleway.variable,
+    mainFont.variable,
   )
 
   return (
@@ -75,7 +74,6 @@ export default async function RootLayout({ children, params }: LayoutProps) {
           <Header />
           <main className="pt-12 md:pt-20">{children}</main>
           <Footer />
-          <div id="portal" className={`${raleway.variable} font-sans`} />
         </AppProvider>
       </body>
     </html>

@@ -1,7 +1,6 @@
 'use client'
 
 import Link from 'next/link'
-import { HTMLProps } from 'react'
 import {
   useContentfulInspectorMode,
   useContentfulLiveUpdates,
@@ -12,12 +11,16 @@ import { Body } from '@/components/atoms/typography/body/body'
 import { Heading } from '@/components/atoms/typography/heading/heading'
 import { CtfImage } from '@/features/contentful/components/contentful-image/contentful-image'
 import { PageBlogPostFieldsFragment } from '@/lib/__generated/sdk'
+import { PropsWithTestId } from '@/types'
 
-interface ArticleTileProps extends HTMLProps<HTMLDivElement> {
+type ArticleTileProps = PropsWithTestId<{
   article: PageBlogPostFieldsFragment
-}
+}>
 
-export const ArticleTile = ({ article }: ArticleTileProps) => {
+export const ArticleTile = ({
+  article,
+  'data-testid': dataTestid,
+}: ArticleTileProps) => {
   const { featuredImage, publishedDate, slug, title } =
     useContentfulLiveUpdates(article)
   const inspectorProps = useContentfulInspectorMode({
@@ -28,6 +31,7 @@ export const ArticleTile = ({ article }: ArticleTileProps) => {
     <Link
       className="flex flex-row gap-x-6 col-span-4 md:flex md:flex-col md:col-span-3 md:gap-y-4"
       href={`/${slug}`}
+      data-testid={dataTestid}
     >
       {featuredImage && (
         <div
@@ -42,6 +46,7 @@ export const ArticleTile = ({ article }: ArticleTileProps) => {
           />
         </div>
       )}
+
       <div className="flex flex-initial flex-col justify-start items-start w-1/2 md:w-full md:flex-auto gap-2">
         {title && (
           <Heading tag="h3" like="h5" {...inspectorProps({ fieldId: 'title' })}>
