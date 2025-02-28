@@ -25,9 +25,11 @@ jobs:
           # node-version: "22.8.0"
 
       - name: Create .npmrc
-        run: |
-          echo "@mrpharderwijk:registry=https://npm.pkg.github.com/" > ~/.npmrc
-          echo "//npm.pkg.github.com/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
+        uses: bikutadesu/create-npmrc@v1.0.0
+        with:
+          org_name: "mrpharderwijk"
+          auth_token: ${{ secrets.NPM_TOKEN }}
+          always_auth: true
 
       - name: Get Yarn cache directory
         id: yarn-cache-dir-path
