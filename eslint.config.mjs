@@ -13,10 +13,10 @@ export default [
   ...compat.config({
     extends: ['eslint:recommended', "next/core-web-vitals"],
   }),
-  ...eslintConfig,
   {
     ignores: ['**/dist', '**/*.config.mjs', '**/lib/__generated'],
   },
+  ...eslintConfig,
   {
     files: ['**/*.{js,jsx,ts,tsx}'],
     plugins: {
@@ -37,5 +37,5 @@ export default [
       '@next/next/inline-script-id': 'error',
       '@next/next/next-script-for-ga': 'error',
     },
-  }
+  },
 ];
