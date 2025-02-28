@@ -1,4 +1,5 @@
 import clsx from 'clsx'
+import { dir } from 'i18next'
 import type { Metadata, Viewport } from 'next'
 import { Figtree } from 'next/font/google'
 import { draftMode } from 'next/headers'
@@ -25,8 +26,8 @@ export const viewport: Viewport = {
   themeColor: '#ffffff',
 }
 
-export async function generateStaticParams(): Promise<LayoutProps['params'][]> {
-  return locales.map((locale) => Promise.resolve({ locale }))
+export async function generateStaticParams() {
+  return locales.map((locale) => ({ locale }))
 }
 
 const mainFont = Figtree({ subsets: ['latin'], variable: '--main-font' })
@@ -59,14 +60,13 @@ export default async function RootLayout({ children, params }: LayoutProps) {
   )
 
   return (
-    // <html lang={locale} dir={dir(locale)}>
-    <html lang={locale}>
+    <html lang={locale} dir={dir(locale)}>
       <head>
-        <link
+        {/* <link
           rel="mask-icon"
           href="/favicons/safari-pinned-tab.svg"
           color="#5bbad5"
-        />
+        /> */}
       </head>
 
       <body className={bodyClassNames}>
