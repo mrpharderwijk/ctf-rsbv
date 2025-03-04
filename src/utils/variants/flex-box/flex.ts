@@ -23,36 +23,50 @@ export const flexVariants = {
     initial: 'lg:flex-initial',
     none: 'lg:flex-none',
   },
-  flexGrow: {
+  'flex-xl': {
+    1: 'xl:flex-1',
+    auto: 'xl:flex-auto',
+    initial: 'xl:flex-initial',
+    none: 'xl:flex-none',
+  },
+  'flex-grow': {
     0: 'flex-grow-0',
     1: 'flex-grow',
   },
-  'flexGrow-sm': {
+  'flex-grow-sm': {
     0: 'sm:flex-grow-0',
     1: 'sm:flex-grow',
   },
-  'flexGrow-md': {
+  'flex-grow-md': {
     0: 'md:flex-grow-0',
     1: 'md:flex-grow',
   },
-  'flexGrow-lg': {
+  'flex-grow-lg': {
     0: 'lg:flex-grow-0',
     1: 'lg:flex-grow',
   },
-  flexShrink: {
+  'flex-grow-xl': {
+    0: 'xl:flex-grow-0',
+    1: 'xl:flex-grow',
+  },
+  'flex-shrink': {
     0: 'flex-shrink-0',
     1: 'flex-shrink',
   },
-  'flexShrink-sm': {
+  'flex-shrink-sm': {
     0: 'sm:flex-shrink-0',
     1: 'sm:flex-shrink',
   },
-  'flexShrink-md': {
+  'flex-shrink-md': {
     0: 'md:flex-shrink-0',
     1: 'md:flex-shrink',
   },
-  'flexShrink-lg': {
+  'flex-shrink-lg': {
     0: 'lg:flex-shrink-0',
     1: 'lg:flex-shrink',
+  },
+  'flex-shrink-xl': {
+    0: 'xl:flex-shrink-0',
+    1: 'xl:flex-shrink',
   },
 }

@@ -30,9 +30,9 @@ describe('FooterList', () => {
       {
         'border-b': 'px',
         'border-b-xl': 'none',
-        borderColor: 'gray-light',
+        'border-color': 'gray-light',
         display: 'flex',
-        flexDirection: 'col',
+        'flex-direction': 'col',
         'gap-y': 4,
         'padding-b': 6,
         children: expect.any(Array),
@@ -44,8 +44,9 @@ describe('FooterList', () => {
     expect(HeadingMock).toHaveBeenCalledWith(
       {
         tag: 'h4',
-        like: 'h6',
         children: title,
+        'font-size': 'sm',
+        'font-weight': 'bold',
       },
       undefined,
     )

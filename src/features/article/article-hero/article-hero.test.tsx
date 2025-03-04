@@ -7,9 +7,8 @@ import { render } from '@testing-library/react'
 
 import { ArticleHero } from './article-hero'
 
-import { FormatDate } from '@/components/atoms/format-date/format-date'
-import { Body } from '@/components/atoms/typography/body/body'
 import { Heading } from '@/components/atoms/typography/heading/heading'
+import { ArticleDate } from '@/features/article/article-date/article-date'
 import { CtfImage } from '@/features/contentful/components/contentful-image/contentful-image'
 import { PageBlogPostFieldsFragment } from '@/lib/__generated/sdk'
 
@@ -29,15 +28,15 @@ const LinkMock = jest.mocked(Link)
 jest.mock('@/features/contentful/components/contentful-image/contentful-image')
 const CtfImageMock = jest.mocked(CtfImage)
 
-jest.mock('@/components/atoms/typography/body/body')
-const BodyMock = jest
-  .mocked(Body)
-  .mockImplementation(jest.fn(({ children }) => <div>{children}</div>))
-
 jest.mock('@/components/atoms/typography/heading/heading')
 const HeadingMock = jest
   .mocked(Heading)
   .mockImplementation(jest.fn(({ children }) => <div>{children}</div>))
+
+jest.mock('@/features/article/article-date/article-date', () => ({
+  ArticleDate: jest.fn(),
+}))
+const ArticleDateMock = jest.mocked(ArticleDate)
 
 jest.mock('@contentful/live-preview/react', () => ({
   useContentfulInspectorMode: jest.fn().mockReturnValue(() => ({})),
@@ -60,11 +59,6 @@ const articleMock = {
     height: 600,
   },
 } as PageBlogPostFieldsFragment
-
-jest.mock('@/components/atoms/format-date/format-date', () => ({
-  FormatDate: jest.fn(({ date }) => <div>{date}</div>),
-}))
-const FormatDateMock = jest.mocked(FormatDate)
 
 describe('ArticleHero', () => {
   beforeEach(jest.clearAllMocks)
@@ -109,16 +103,6 @@ describe('ArticleHero', () => {
       undefined,
     )
 
-    expect(BodyMock).toHaveBeenCalledWith(
-      {
-        color: 'gray',
-        size: 'sm',
-        fontWeight: 'normal',
-        children: expect.anything(),
-      },
-      undefined,
-    )
-
     expect(CtfImageMock).toHaveBeenCalledTimes(1)
     expect(CtfImageMock).toHaveBeenCalledWith(
       {
@@ -135,21 +119,10 @@ describe('ArticleHero', () => {
       undefined,
     )
 
-    expect(BodyMock).toHaveBeenCalledTimes(1)
-    expect(BodyMock).toHaveBeenCalledWith(
+    expect(ArticleDateMock).toHaveBeenCalledTimes(1)
+    expect(ArticleDateMock).toHaveBeenCalledWith(
       {
-        color: 'gray',
-        size: 'sm',
-        fontWeight: 'normal',
-        children: expect.anything(),
-      },
-      undefined,
-    )
-
-    expect(FormatDateMock).toHaveBeenCalledTimes(1)
-    expect(FormatDateMock).toHaveBeenCalledWith(
-      {
-        date: '2024-01-01',
+        publishedDate: '2024-01-01',
       },
       undefined,
     )
@@ -159,6 +132,9 @@ describe('ArticleHero', () => {
       {
         tag: 'h3',
         children: expect.anything(),
+        'font-size': 'base',
+        'font-size-md': 'lg',
+        'font-weight': 'semibold',
       },
       undefined,
     )

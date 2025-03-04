@@ -1,5 +1,5 @@
 export const justifyContentVariants = {
-  justifyContent: {
+  'justify-content': {
     start: 'justify-start',
     end: 'justify-end',
     center: 'justify-center',
@@ -7,7 +7,7 @@ export const justifyContentVariants = {
     around: 'justify-around',
     evenly: 'justify-evenly',
   },
-  'justifyContent-sm': {
+  'justify-content-sm': {
     start: 'sm:justify-start',
     end: 'sm:justify-end',
     center: 'sm:justify-center',
@@ -15,7 +15,7 @@ export const justifyContentVariants = {
     around: 'sm:justify-around',
     evenly: 'sm:justify-evenly',
   },
-  'justifyContent-md': {
+  'justify-content-md': {
     start: 'md:justify-start',
     end: 'md:justify-end',
     center: 'md:justify-center',
@@ -23,12 +23,20 @@ export const justifyContentVariants = {
     around: 'md:justify-around',
     evenly: 'md:justify-evenly',
   },
-  'justifyContent-lg': {
+  'justify-content-lg': {
     start: 'lg:justify-start',
     end: 'lg:justify-end',
     center: 'lg:justify-center',
     between: 'lg:justify-between',
     around: 'lg:justify-around',
     evenly: 'lg:justify-evenly',
+  },
+  'justify-content-xl': {
+    start: 'xl:justify-start',
+    end: 'xl:justify-end',
+    center: 'xl:justify-center',
+    between: 'xl:justify-between',
+    around: 'xl:justify-around',
+    evenly: 'xl:justify-evenly',
   },
 }

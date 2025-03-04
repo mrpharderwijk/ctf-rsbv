@@ -1,5 +1,5 @@
 export const flexBasisVariants = {
-  flexBasis: {
+  'flex-basis': {
     0: 'basis-0',
     1: 'basis-1',
     2: 'basis-2',
@@ -64,7 +64,7 @@ export const flexBasisVariants = {
     '11/12': 'basis-11/12',
     full: 'basis-full',
   },
-  'flexBasis-sm': {
+  'flex-basis-sm': {
     0: 'sm:basis-0',
     1: 'sm:basis-1',
     2: 'sm:basis-2',
@@ -129,7 +129,7 @@ export const flexBasisVariants = {
     '11/12': 'sm:basis-11/12',
     full: 'sm:basis-full',
   },
-  'flexBasis-md': {
+  'flex-basis-md': {
     0: 'md:basis-0',
     1: 'md:basis-1',
     2: 'md:basis-2',
@@ -194,7 +194,7 @@ export const flexBasisVariants = {
     '11/12': 'md:basis-11/12',
     full: 'md:basis-full',
   },
-  'flexBasis-lg': {
+  'flex-basis-lg': {
     0: 'lg:basis-0',
     1: 'lg:basis-1',
     2: 'lg:basis-2',
@@ -259,7 +259,7 @@ export const flexBasisVariants = {
     '11/12': 'lg:basis-11/12',
     full: 'lg:basis-full',
   },
-  'flexBasis-xl': {
+  'flex-basis-xl': {
     0: 'xl:basis-0',
     1: 'xl:basis-1',
     2: 'xl:basis-2',

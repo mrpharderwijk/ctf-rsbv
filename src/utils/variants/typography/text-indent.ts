@@ -1,5 +1,5 @@
 export const textIndentVariants = {
-  textIndent: {
+  'text-indent': {
     0: 'indent-0',
     1: 'indent-1',
     2: 'indent-2',
@@ -31,7 +31,7 @@ export const textIndentVariants = {
     80: 'indent-80',
     96: 'indent-96',
   },
-  'textIndent-sm': {
+  'text-indent-sm': {
     0: 'sm:indent-0',
     1: 'sm:indent-1',
     2: 'sm:indent-2',
@@ -63,7 +63,7 @@ export const textIndentVariants = {
     80: 'sm:indent-80',
     96: 'sm:indent-96',
   },
-  'textIndent-md': {
+  'text-indent-md': {
     0: 'md:indent-0',
     1: 'md:indent-1',
     2: 'md:indent-2',
@@ -95,7 +95,7 @@ export const textIndentVariants = {
     80: 'md:indent-80',
     96: 'md:indent-96',
   },
-  'textIndent-lg': {
+  'text-indent-lg': {
     0: 'lg:indent-0',
     1: 'lg:indent-1',
     2: 'lg:indent-2',
@@ -127,7 +127,7 @@ export const textIndentVariants = {
     80: 'lg:indent-80',
     96: 'lg:indent-96',
   },
-  'textIndent-xl': {
+  'text-indent-xl': {
     0: 'xl:indent-0',
     1: 'xl:indent-1',
     2: 'xl:indent-2',

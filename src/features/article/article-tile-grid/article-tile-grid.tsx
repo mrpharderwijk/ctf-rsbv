@@ -1,5 +1,6 @@
 import { ReactElement } from 'react'
 
+import { Grid } from '@/components/atoms/layout/grid/grid'
 import { ArticleTile } from '@/features/article/article-tile-grid/components/article-tile/article-tile'
 import { PageBlogPostFieldsFragment } from '@/lib/__generated/sdk'
 import { PropsWithTestId } from '@/types'
@@ -15,14 +16,18 @@ export const ArticleTileGrid = ({
   if (!articles || !articles.length) {
     return null
   }
+
   return (
-    <div
-      className="grid gap-x-6 gap-y-6 grid-cols-[repeat(4,1fr)] md:grid-cols-[repeat(6,1fr)] lg:grid-cols-[repeat(12,1fr)]"
+    <Grid
       data-testid={dataTestid}
+      gap={6}
+      grid-cols={4}
+      grid-cols-md={6}
+      grid-cols-lg={12}
     >
       {articles.map((article, index) => {
         return article ? <ArticleTile key={index} article={article} /> : null
       })}
-    </div>
+    </Grid>
   )
 }

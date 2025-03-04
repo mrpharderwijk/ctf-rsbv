@@ -1,5 +1,5 @@
 export const lineClampVariants = {
-  lineClamp: {
+  'line-clamp': {
     1: 'line-clamp-1',
     2: 'line-clamp-2',
     3: 'line-clamp-3',
@@ -8,7 +8,7 @@ export const lineClampVariants = {
     6: 'line-clamp-6',
     none: 'line-clamp-none',
   },
-  'lineClamp-sm': {
+  'line-clamp-sm': {
     1: 'sm:line-clamp-1',
     2: 'sm:line-clamp-2',
     3: 'sm:line-clamp-3',
@@ -17,7 +17,7 @@ export const lineClampVariants = {
     6: 'sm:line-clamp-6',
     none: 'sm:line-clamp-none',
   },
-  'lineClamp-md': {
+  'line-clamp-md': {
     1: 'md:line-clamp-1',
     2: 'md:line-clamp-2',
     3: 'md:line-clamp-3',
@@ -26,7 +26,7 @@ export const lineClampVariants = {
     6: 'md:line-clamp-6',
     none: 'md:line-clamp-none',
   },
-  'lineClamp-lg': {
+  'line-clamp-lg': {
     1: 'lg:line-clamp-1',
     2: 'lg:line-clamp-2',
     3: 'lg:line-clamp-3',
@@ -35,7 +35,7 @@ export const lineClampVariants = {
     6: 'lg:line-clamp-6',
     none: 'lg:line-clamp-none',
   },
-  'lineClamp-xl': {
+  'line-clamp-xl': {
     1: 'xl:line-clamp-1',
     2: 'xl:line-clamp-2',
     3: 'xl:line-clamp-3',

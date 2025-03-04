@@ -13,19 +13,19 @@ export function FooterCopyright(): ReactElement {
   return (
     <Box
       display="flex"
-      flexDirection="col"
-      flexDirection-lg="rowReverse"
-      alignItems-lg="center"
-      justifyContent-md="center"
-      justifyContent-lg="between"
+      flex-direction="col"
+      flex-direction-lg="rowReverse"
+      align-items-lg="center"
+      justify-content-md="center"
+      justify-content-lg="between"
       padding-b={6}
       gap-y={3}
     >
       <Box
         display="flex"
-        justifyContent="start"
-        display-md="inlineFlex"
-        justifyContent-md="center"
+        justify-content="start"
+        display-md="inline-flex"
+        justify-content-md="center"
       >
         <ul className="inline-flex flex-row nowrap gap-3">
           <li>
@@ -45,17 +45,17 @@ export function FooterCopyright(): ReactElement {
 
       <Box
         display="flex"
-        justifyContent="start"
-        display-md="inlineFlex"
-        justifyContent-md="center"
+        justify-content="start"
+        display-md="inline-flex"
+        justify-content-md="center"
       >
         <Box
-          display="inlineFlex"
-          flexDirection="col"
-          flexDirection-lg="row"
-          alignItems="start"
-          alignItems-md="center"
-          justifyContent="center"
+          display="inline-flex"
+          flex-direction="col"
+          flex-direction-lg="row"
+          align-items="start"
+          align-items-md="center"
+          justify-content="center"
           gap="0.5"
         >
           <Body tag="label" size="sm">

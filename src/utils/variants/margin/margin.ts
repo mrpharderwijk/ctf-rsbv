@@ -283,7 +283,7 @@ export const marginVariants = {
     56: 'xl:my-56',
     64: 'xl:my-64',
   },
-  marginLeft: {
+  'margin-left': {
     auto: 'ml-auto',
     0: 'ml-0',
     1: 'ml-1',
@@ -304,7 +304,7 @@ export const marginVariants = {
     56: 'ml-56',
     64: 'ml-64',
   },
-  'marginLeft-sm': {
+  'margin-left-sm': {
     auto: 'sm:ml-auto',
     0: 'sm:ml-0',
     1: 'sm:ml-1',
@@ -325,7 +325,7 @@ export const marginVariants = {
     56: 'sm:ml-56',
     64: 'sm:ml-64',
   },
-  'marginLeft-md': {
+  'margin-left-md': {
     auto: 'md:ml-auto',
     0: 'md:ml-0',
     1: 'md:ml-1',
@@ -346,7 +346,7 @@ export const marginVariants = {
     56: 'md:ml-56',
     64: 'md:ml-64',
   },
-  'marginLeft-lg': {
+  'margin-left-lg': {
     auto: 'lg:ml-auto',
     0: 'lg:ml-0',
     1: 'lg:ml-1',
@@ -367,7 +367,7 @@ export const marginVariants = {
     56: 'lg:ml-56',
     64: 'lg:ml-64',
   },
-  'marginLeft-xl': {
+  'margin-left-xl': {
     auto: 'xl:ml-auto',
     0: 'xl:ml-0',
     1: 'xl:ml-1',
@@ -388,7 +388,7 @@ export const marginVariants = {
     56: 'xl:ml-56',
     64: 'xl:ml-64',
   },
-  marginRight: {
+  'margin-right': {
     auto: 'mr-auto',
     0: 'mr-0',
     1: 'mr-1',
@@ -409,7 +409,7 @@ export const marginVariants = {
     56: 'mr-56',
     64: 'mr-64',
   },
-  'marginRight-sm': {
+  'margin-right-sm': {
     auto: 'sm:mr-auto',
     0: 'sm:mr-0',
     1: 'sm:mr-1',
@@ -430,7 +430,7 @@ export const marginVariants = {
     56: 'sm:mr-56',
     64: 'sm:mr-64',
   },
-  'marginRight-md': {
+  'margin-right-md': {
     auto: 'md:mr-auto',
     0: 'md:mr-0',
     1: 'md:mr-1',
@@ -451,7 +451,7 @@ export const marginVariants = {
     56: 'md:mr-56',
     64: 'md:mr-64',
   },
-  'marginRight-lg': {
+  'margin-right-lg': {
     auto: 'lg:mr-auto',
     0: 'lg:mr-0',
     1: 'lg:mr-1',
@@ -472,7 +472,7 @@ export const marginVariants = {
     56: 'lg:mr-56',
     64: 'lg:mr-64',
   },
-  'marginRight-xl': {
+  'margin-right-xl': {
     auto: 'xl:mr-auto',
     0: 'xl:mr-0',
     1: 'xl:mr-1',
@@ -493,7 +493,7 @@ export const marginVariants = {
     56: 'xl:mr-56',
     64: 'xl:mr-64',
   },
-  marginTop: {
+  'margin-top': {
     auto: 'mt-auto',
     0: 'mt-0',
     1: 'mt-1',
@@ -514,7 +514,7 @@ export const marginVariants = {
     56: 'mt-56',
     64: 'mt-64',
   },
-  'marginTop-sm': {
+  'margin-top-sm': {
     auto: 'sm:mt-auto',
     0: 'sm:mt-0',
     1: 'sm:mt-1',
@@ -535,7 +535,7 @@ export const marginVariants = {
     56: 'sm:mt-56',
     64: 'sm:mt-64',
   },
-  'marginTop-md': {
+  'margin-top-md': {
     auto: 'md:mt-auto',
     0: 'md:mt-0',
     1: 'md:mt-1',
@@ -556,7 +556,7 @@ export const marginVariants = {
     56: 'md:mt-56',
     64: 'md:mt-64',
   },
-  'marginTop-lg': {
+  'margin-top-lg': {
     auto: 'lg:mt-auto',
     0: 'lg:mt-0',
     1: 'lg:mt-1',
@@ -577,7 +577,7 @@ export const marginVariants = {
     56: 'lg:mt-56',
     64: 'lg:mt-64',
   },
-  'marginTop-xl': {
+  'margin-top-xl': {
     auto: 'xl:mt-auto',
     0: 'xl:mt-0',
     1: 'xl:mt-1',
@@ -598,7 +598,7 @@ export const marginVariants = {
     56: 'xl:mt-56',
     64: 'xl:mt-64',
   },
-  marginBottom: {
+  'margin-bottom': {
     auto: 'mb-auto',
     0: 'mb-0',
     1: 'mb-1',
@@ -619,7 +619,7 @@ export const marginVariants = {
     56: 'mb-56',
     64: 'mb-64',
   },
-  'marginBottom-sm': {
+  'margin-bottom-sm': {
     auto: 'sm:mb-auto',
     0: 'sm:mb-0',
     1: 'sm:mb-1',
@@ -640,7 +640,7 @@ export const marginVariants = {
     56: 'sm:mb-56',
     64: 'sm:mb-64',
   },
-  'marginBottom-md': {
+  'margin-bottom-md': {
     auto: 'md:mb-auto',
     0: 'md:mb-0',
     1: 'md:mb-1',
@@ -661,7 +661,7 @@ export const marginVariants = {
     56: 'md:mb-56',
     64: 'md:mb-64',
   },
-  'marginBottom-lg': {
+  'margin-bottom-lg': {
     auto: 'lg:mb-auto',
     0: 'lg:mb-0',
     1: 'lg:mb-1',
@@ -682,7 +682,7 @@ export const marginVariants = {
     56: 'lg:mb-56',
     64: 'lg:mb-64',
   },
-  'marginBottom-xl': {
+  'margin-bottom-xl': {
     auto: 'xl:mb-auto',
     0: 'xl:mb-0',
     1: 'xl:mb-1',

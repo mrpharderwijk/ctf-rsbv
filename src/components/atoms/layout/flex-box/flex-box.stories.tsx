@@ -54,7 +54,7 @@ FlexBoxRow.args = {
               right={0}
               bottom={0}
               left={0}
-              zIndex={10}
+              z-index={10}
             />
 
             <span className="relative z-10">Hello</span>
@@ -70,7 +70,7 @@ FlexBoxRow.args = {
               right={0}
               bottom={0}
               left={0}
-              zIndex={10}
+              z-index={10}
             />
             <span className="relative z-10">World!</span>
           </Box>
@@ -114,7 +114,7 @@ FlexBoxColumn.args = {
               right={0}
               bottom={0}
               left={0}
-              zIndex={10}
+              z-index={10}
             />
 
             <span className="relative z-10">Hello</span>
@@ -130,7 +130,7 @@ FlexBoxColumn.args = {
               right={0}
               bottom={0}
               left={0}
-              zIndex={10}
+              z-index={10}
             />
             <span className="relative z-10">World!</span>
           </Box>

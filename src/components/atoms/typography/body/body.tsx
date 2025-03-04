@@ -3,23 +3,23 @@ import { PropsWithChildren, ReactElement } from 'react'
 
 import { bodyClassNames } from '@/components/atoms/typography/body/body.class-names'
 import { Text } from '@/components/atoms/typography/text/text'
-import { textClassNames } from '@/components/atoms/typography/text/text-class-names'
+import { textClassNames } from '@/components/atoms/typography/text/text.class-names'
 import { PropsWithTestId, TextElementTag } from '@/types'
 
 type BodyProps = PropsWithChildren<
   PropsWithTestId<
     VariantProps<typeof bodyClassNames> & {
-      size?: VariantProps<typeof textClassNames>['fontSize']
-      'size-sm'?: VariantProps<typeof textClassNames>['fontSize-sm']
-      'size-md'?: VariantProps<typeof textClassNames>['fontSize-md']
-      'size-lg'?: VariantProps<typeof textClassNames>['fontSize-lg']
-      'size-xl'?: VariantProps<typeof textClassNames>['fontSize-xl']
-      color?: VariantProps<typeof textClassNames>['textColor']
-      weight?: VariantProps<typeof textClassNames>['fontWeight']
-      'weight-sm'?: VariantProps<typeof textClassNames>['fontWeight-sm']
-      'weight-md'?: VariantProps<typeof textClassNames>['fontWeight-md']
-      'weight-lg'?: VariantProps<typeof textClassNames>['fontWeight-lg']
-      'weight-xl'?: VariantProps<typeof textClassNames>['fontWeight-xl']
+      size?: VariantProps<typeof textClassNames>['font-size']
+      'size-sm'?: VariantProps<typeof textClassNames>['font-size-sm']
+      'size-md'?: VariantProps<typeof textClassNames>['font-size-md']
+      'size-lg'?: VariantProps<typeof textClassNames>['font-size-lg']
+      'size-xl'?: VariantProps<typeof textClassNames>['font-size-xl']
+      color?: VariantProps<typeof textClassNames>['text-color']
+      weight?: VariantProps<typeof textClassNames>['font-weight']
+      'weight-sm'?: VariantProps<typeof textClassNames>['font-weight-sm']
+      'weight-md'?: VariantProps<typeof textClassNames>['font-weight-md']
+      'weight-lg'?: VariantProps<typeof textClassNames>['font-weight-lg']
+      'weight-xl'?: VariantProps<typeof textClassNames>['font-weight-xl']
       tag?: TextElementTag
     }
   >
@@ -40,12 +40,12 @@ export function Body({
   return (
     <Text
       tag={tag}
-      fontSize={size}
-      fontSize-sm={sizeSm}
-      fontSize-md={sizeMd}
-      fontSize-lg={sizeLg}
-      fontSize-xl={sizeXl}
-      textColor={color}
+      font-size={size}
+      font-size-sm={sizeSm}
+      font-size-md={sizeMd}
+      font-size-lg={sizeLg}
+      font-size-xl={sizeXl}
+      text-color={color}
       data-testid={testId}
       {...bodyProps}
     >

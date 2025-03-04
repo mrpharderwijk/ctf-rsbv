@@ -35,9 +35,9 @@ describe('FooterDisclaimer', () => {
       {
         'border-b': 'px',
         'border-b-md': 'px',
-        borderColor: 'gray-light',
+        'border-color': 'gray-light',
         display: 'flex',
-        flexDirection: 'col',
+        'flex-direction': 'col',
         'padding-b': 6,
         'padding-b-xl': 12,
         children: expect.any(Object),
@@ -49,7 +49,7 @@ describe('FooterDisclaimer', () => {
       2,
       {
         display: 'flex',
-        flexDirection: 'col',
+        'flex-direction': 'col',
         'max-w': '2xl',
         'gap-y': 3,
         children: expect.any(Array),
@@ -61,8 +61,9 @@ describe('FooterDisclaimer', () => {
     expect(HeadingMock).toHaveBeenCalledWith(
       {
         tag: 'h4',
-        like: 'h6',
+        like: 'h5',
         children: title,
+        'font-weight': 'bold',
       },
       undefined,
     )

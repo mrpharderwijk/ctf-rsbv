@@ -1,5 +1,5 @@
 export const letterSpacingVariants = {
-  letterSpacing: {
+  'letter-spacing': {
     tighter: 'tighter',
     tight: 'tight',
     normal: 'normal',
@@ -7,7 +7,7 @@ export const letterSpacingVariants = {
     wider: 'wider',
     widest: 'widest',
   },
-  'letterSpacing-sm': {
+  'letter-spacing-sm': {
     tighter: 'sm:tighter',
     tight: 'sm:tight',
     normal: 'sm:normal',
@@ -15,7 +15,7 @@ export const letterSpacingVariants = {
     wider: 'sm:wider',
     widest: 'sm:widest',
   },
-  'letterSpacing-md': {
+  'letter-spacing-md': {
     tighter: 'md:tighter',
     tight: 'md:tight',
     normal: 'md:normal',
@@ -23,7 +23,7 @@ export const letterSpacingVariants = {
     wider: 'md:wider',
     widest: 'md:widest',
   },
-  'letterSpacing-lg': {
+  'letter-spacing-lg': {
     tighter: 'lg:tighter',
     tight: 'lg:tight',
     normal: 'lg:normal',
@@ -31,7 +31,7 @@ export const letterSpacingVariants = {
     wider: 'lg:wider',
     widest: 'lg:widest',
   },
-  'letterSpacing-xl': {
+  'letter-spacing-xl': {
     tighter: 'xl:tighter',
     tight: 'xl:tight',
     normal: 'xl:normal',

@@ -12,14 +12,14 @@ export function FooterList({ children, title }: FooterListProps): ReactElement {
     <Box
       border-b="px"
       border-b-xl="none"
-      borderColor="gray-light"
+      border-color="gray-light"
       display="flex"
-      flexDirection="col"
+      flex-direction="col"
       gap-y={4}
       padding-b={6}
     >
       {!!title && (
-        <Heading tag="h4" like="h6">
+        <Heading tag="h4" font-size="sm" font-weight="bold">
           {title}
         </Heading>
       )}

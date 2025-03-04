@@ -19,4 +19,9 @@ export const orderVariants = {
     last: 'lg:order-last',
     none: 'lg:order-none',
   },
+  'order-xl': {
+    first: 'xl:order-first',
+    last: 'xl:order-last',
+    none: 'xl:order-none',
+  },
 }

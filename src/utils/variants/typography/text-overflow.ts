@@ -1,25 +1,25 @@
 export const textOverflowVariants = {
-  textOverflow: {
+  'text-overflow': {
     truncate: 'truncate',
     ellipsis: 'text-ellipsis',
     clip: 'text-clip',
   },
-  'textOverflow-sm': {
+  'text-overflow-sm': {
     truncate: 'sm:truncate',
     ellipsis: 'sm:text-ellipsis',
     clip: 'sm:text-clip',
   },
-  'textOverflow-md': {
+  'text-overflow-md': {
     truncate: 'md:truncate',
     ellipsis: 'md:text-ellipsis',
     clip: 'md:text-clip',
   },
-  'textOverflow-lg': {
+  'text-overflow-lg': {
     truncate: 'lg:truncate',
     ellipsis: 'lg:text-ellipsis',
     clip: 'lg:text-clip',
   },
-  'textOverflow-xl': {
+  'text-overflow-xl': {
     truncate: 'xl:truncate',
     ellipsis: 'xl:text-ellipsis',
     clip: 'xl:text-clip',

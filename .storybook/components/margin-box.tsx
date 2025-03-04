@@ -1,8 +1,8 @@
-import { PropsWithChildren, ReactElement } from 'react';
+import { PropsWithChildren, ReactElement } from 'react'
 
-import { Box, BoxProps } from '@/components/atoms/layout/box/box';
+import { Box, BoxProps } from '@/components/atoms/layout/box/box'
 
-type MarginBoxProps = PropsWithChildren<BoxProps>;
+type MarginBoxProps = PropsWithChildren<BoxProps>
 
 export function MarginBox({
   children,
@@ -16,10 +16,10 @@ export function MarginBox({
     left = 0,
     opacity,
     float,
-    bgColor = 'pink-100',
-    zIndex,
+    'bg-color': bgColor = 'pink-100',
+    'z-index': zIndex,
     width = 'full',
-  } = props;
+  } = props
   return (
     <Box
       position={position}
@@ -27,13 +27,13 @@ export function MarginBox({
       right={right}
       bottom={bottom}
       left={left}
-      bgColor={bgColor}
+      bg-color={bgColor}
       float={float}
       opacity={opacity}
       width={width}
-      zIndex={zIndex}
+      z-index={zIndex}
     >
       {children}
     </Box>
-  );
+  )
 }

@@ -6,52 +6,39 @@ import { PropsWithTestId } from '@/types'
 type HeadingElementTag = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6'
 
 export type HeadingProps = PropsWithChildren<
-  PropsWithTestId<{
-    tag?: HeadingElementTag
-    like?: HeadingElementTag
-  }> &
-    HTMLAttributes<HTMLHeadingElement>
+  PropsWithTestId<
+    {
+      tag?: HeadingElementTag
+      like?: HeadingElementTag
+    } & HTMLAttributes<HTMLHeadingElement> &
+      TextProps
+  >
 >
 
 const headingTextPropsMap = {
   h1: {
-    fontSize: 'base',
-    'fontSize-md': 'lg',
-    'fontSize-lg': 'xl',
-    fontWeight: 'medium',
+    'font-size': 'xl',
   },
   h2: {
-    fontSize: 'base',
-    'fontSize-md': 'lg',
-    'fontSize-lg': 'xl',
-    fontWeight: 'medium',
+    'font-size': 'lg',
+    'font-weight': 'medium',
   },
   h3: {
-    fontSize: 'base',
-    'fontSize-md': 'lg',
-    'fontSize-lg': 'xl',
-    fontWeight: 'medium',
+    'font-size': 'base',
   },
   h4: {
-    fontSize: 'base',
-    'fontSize-md': 'lg',
-    'fontSize-lg': 'xl',
-    fontWeight: 'medium',
+    'font-size': 'smd',
+    'font-size-md': 'lg',
+    'font-size-lg': 'xl',
+    'font-weight': 'medium',
   },
   h5: {
-    fontSize: 'smd',
-    lineHeight: '2xl',
-    'fontSize-md': 'md',
-    'lineHeight-md': '3xl',
-    'fontSize-lg': 'smd',
-    'lineHeight-lg': 'xs',
-    'fontSize-xl': 'md',
-    'lineHeight-xl': '3xl',
-    fontWeight: 'semibold',
+    'font-size': 'sm',
+    'font-weight': 'semibold',
   },
   h6: {
-    fontSize: 'sm',
-    fontWeight: 'semibold',
+    'font-size': 'xs',
+    'font-weight': 'semibold',
   },
 }
 
@@ -61,10 +48,9 @@ export function Heading({
   tag = 'h1',
   ...headingProps
 }: HeadingProps): ReactElement {
-  const headingLike = like ?? tag
   const textProps = {
     tag,
-    ...(headingTextPropsMap[headingLike] as TextProps),
+    ...(!!like && (headingTextPropsMap[like] as TextProps)),
     ...headingProps,
   }
 

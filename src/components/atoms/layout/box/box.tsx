@@ -7,7 +7,14 @@ import { ElementTag, PropsWithTestId } from '@/types'
 import { cn } from '@/utils/class-names'
 
 type BoxStylesProps = VariantProps<typeof boxClassnames> &
-  PropsWithChildren<PropsWithTestId<ElementTag>>
+  PropsWithChildren<
+    PropsWithTestId<
+      | ElementTag
+      | {
+          tag?: 'ul' | 'li'
+        }
+    >
+  >
 
 export type BoxProps = BoxStylesProps
 

@@ -1,7 +1,7 @@
 import { type VariantProps } from 'class-variance-authority'
 import { ReactElement } from 'react'
 
-import { loaderClassNames, loaderVariants } from './loader-class-names'
+import { loaderClassNames, loaderVariants } from './loader.class-names'
 
 import { PropsWithTestId } from '@/types'
 import { cn } from '@/utils/class-names'
