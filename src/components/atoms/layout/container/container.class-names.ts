@@ -1,5 +1,7 @@
 import { cva } from 'class-variance-authority'
 
+import { backgroundColorVariants } from '@/utils/variants'
+
 export const containerClassNames = cva('mx-auto', {
   variants: {
     padding: {
@@ -10,6 +12,7 @@ export const containerClassNames = cva('mx-auto', {
       true: 'w-full',
       false: 'max-w[2520px] w-full',
     },
+    ...backgroundColorVariants,
   },
   defaultVariants: {
     fullWidth: false,

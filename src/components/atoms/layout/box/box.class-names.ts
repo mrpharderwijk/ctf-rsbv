@@ -32,11 +32,15 @@ import {
   topVariants,
   zIndexVariants,
 } from '@/utils/variants/position'
+import { snapVariants } from '@/utils/variants/position/snap'
+import { snapAlignVariants } from '@/utils/variants/position/snap-align'
+import { snapTypeVariants } from '@/utils/variants/position/snap-type'
 import {
   heightVariants,
   maxWidthVariants,
   widthVariants,
 } from '@/utils/variants/sizing'
+import { minWidthVariants } from '@/utils/variants/sizing/min-width'
 
 export const boxClassnames = cva('', {
   variants: {
@@ -73,6 +77,9 @@ export const boxClassnames = cva('', {
     ...zIndexVariants,
     ...overflowVariants,
     ...floatVariants,
+    ...snapVariants,
+    ...snapTypeVariants,
+    ...snapAlignVariants,
 
     /**
      * Sizing
@@ -80,6 +87,7 @@ export const boxClassnames = cva('', {
     ...heightVariants,
     ...widthVariants,
     ...maxWidthVariants,
+    ...minWidthVariants,
 
     ...borderVariants,
     ...borderStyleVariants,

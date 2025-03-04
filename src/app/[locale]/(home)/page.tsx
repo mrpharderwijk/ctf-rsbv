@@ -8,6 +8,8 @@ import { GridItem } from '@/components/atoms/layout/grid/components/grid-item/gr
 import { Grid } from '@/components/atoms/layout/grid/grid'
 import { Body } from '@/components/atoms/typography/body/body'
 import { Heading } from '@/components/atoms/typography/heading/heading'
+import { SliderSlide } from '@/components/organisms/slider/components/slider-slide/slider-slide'
+import { Slider } from '@/components/organisms/slider/slider'
 import { ArticleHero } from '@/features/article/article-hero/article-hero'
 import { ArticleTileGrid } from '@/features/article/article-tile-grid/article-tile-grid'
 import { defaultLocale, locales } from '@/features/i18n/utils/config'
@@ -114,9 +116,13 @@ export default async function Page({ params }: NextPageProps<unknown>) {
         <SocialSection />
       </Container>
 
-      <Container tag="section" id="content-slider" padding={false}>
+      <Container
+        tag="section"
+        id="content-slider"
+        bg-color="gray-lightest"
+        padding={false}
+      >
         <Box
-          bg-color="gray-lightest"
           display="flex"
           flex-direction="col"
           padding-x={6}
@@ -154,33 +160,33 @@ export default async function Page({ params }: NextPageProps<unknown>) {
           </Grid>
         </Box>
 
-        <Box
-          bg-color="gray-lightest"
-          display="flex"
-          flex-direction="col"
-          align-items="start"
-          justify-content="center"
-          width="full"
-          overflow-x="hidden"
-        >
-          <div className="flex overflow-x-scroll snap-x snap-mandatory w-full gap-6 [&>*]:w-[18.75rem] p-6">
-            <div className="flex flex-shrink-0 w-full snap-center justify-center items-center bg-color-red-light h-80">
-              <span>slide 1</span>
+        <Slider>
+          <SliderSlide width={20} min-width="sm">
+            <div className="grid place-items-center w-full h-80 bg-color-red-light">
+              slide 1
             </div>
-            <div className="flex flex-shrink-0 w-full snap-center justify-center items-center bg-color-red-light h-80">
-              <span>slide 2</span>
+          </SliderSlide>
+          <SliderSlide width={20} min-width="sm">
+            <div className="grid place-items-center w-full h-80 bg-color-red-light">
+              slide 2
             </div>
-            <div className="flex flex-shrink-0 w-full snap-center justify-center items-center bg-color-red-light h-80">
-              <span>slide 3</span>
+          </SliderSlide>
+          <SliderSlide width={20} min-width="sm">
+            <div className="grid place-items-center w-full h-80 bg-color-red-light">
+              slide 3
             </div>
-            <div className="flex flex-shrink-0 w-full snap-center justify-center items-center bg-color-red-light h-80">
-              <span>slide 4</span>
+          </SliderSlide>
+          <SliderSlide width={20} min-width="sm">
+            <div className="grid place-items-center w-full h-80 bg-color-red-light">
+              slide 4
             </div>
-            <div className="flex flex-shrink-0 w-full snap-center justify-center items-center bg-color-red-light h-80">
-              <span>slide 5</span>
+          </SliderSlide>
+          <SliderSlide width={20} min-width="sm">
+            <div className="grid place-items-center w-full h-80 bg-color-red-light">
+              slide 5
             </div>
-          </div>
-        </Box>
+          </SliderSlide>
+        </Slider>
       </Container>
     </>
   )

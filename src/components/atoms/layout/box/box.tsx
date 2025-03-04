@@ -1,22 +1,20 @@
 import { type VariantProps } from 'class-variance-authority'
-import { PropsWithChildren, ReactElement } from 'react'
+import { PropsWithChildren, ReactElement, Ref } from 'react'
 
 import { boxClassnames } from './box.class-names'
 
 import { ElementTag, PropsWithTestId } from '@/types'
 import { cn } from '@/utils/class-names'
 
-type BoxStylesProps = VariantProps<typeof boxClassnames> &
+export type BoxProps = VariantProps<typeof boxClassnames> &
   PropsWithChildren<
     PropsWithTestId<
       | ElementTag
       | {
           tag?: 'ul' | 'li'
         }
-    >
+    > & { ref?: Ref<HTMLDivElement> }
   >
-
-export type BoxProps = BoxStylesProps
 
 export function Box({
   tag = 'div',
