@@ -10,20 +10,22 @@ type SliderSlideProps = PropsWithChildren<
     Pick<
       VariantProps<typeof boxClassnames>,
       'display' | 'width' | 'max-width' | 'min-width' | 'snap-align'
-    >
+    > & { id?: string }
   >
 >
 
 export function SliderSlide({
+  id,
   children,
   'data-testid': dataTestId,
   ...sliderSlideProps
 }: SliderSlideProps): ReactElement {
-  console.log('sliderSlide', sliderSlideProps)
   return (
     <Box
+      id={id}
       display="flex"
       flex-shrink={0}
+      flex-grow={1}
       justify-content="center"
       align-items="center"
       snap-align="center"

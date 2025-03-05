@@ -19,6 +19,7 @@ import {
   justifyContentVariants,
   orderVariants,
 } from '@/utils/variants/flex-box'
+import { placeItemsVariants } from '@/utils/variants/flex-box/place-items'
 import { marginVariants } from '@/utils/variants/margin'
 import { opacityVariants } from '@/utils/variants/opacity'
 import { overflowVariants } from '@/utils/variants/overflow'
@@ -59,6 +60,7 @@ export const boxClassnames = cva('', {
     ...orderVariants,
     ...gapVariants,
     ...flexBasisVariants,
+    ...placeItemsVariants,
 
     /**
      * Spacing

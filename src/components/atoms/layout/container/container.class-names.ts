@@ -4,6 +4,7 @@ import { backgroundColorVariants } from '@/utils/variants'
 
 export const containerClassNames = cva('mx-auto', {
   variants: {
+    ...backgroundColorVariants,
     padding: {
       true: 'px-6 md:px-10 lg:px-10 xl:px-20',
       false: undefined,
@@ -12,7 +13,6 @@ export const containerClassNames = cva('mx-auto', {
       true: 'w-full',
       false: 'max-w[2520px] w-full',
     },
-    ...backgroundColorVariants,
   },
   defaultVariants: {
     fullWidth: false,

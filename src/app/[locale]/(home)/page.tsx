@@ -80,6 +80,7 @@ export default async function Page({ params }: NextPageProps<unknown>) {
     preview,
   })
   const posts = blogPostsData.pageBlogPostCollection?.items
+  const slides = Array.from({ length: 10 })
 
   if (!page?.featuredBlogPost || !posts) {
     return
@@ -87,9 +88,11 @@ export default async function Page({ params }: NextPageProps<unknown>) {
 
   return (
     <>
-      <Container tag="section" id="homepage-hero">
-        <ArticleHero article={page.featuredBlogPost} />
-      </Container>
+      {!!page?.featuredBlogPost && (
+        <Container tag="section" id="homepage-hero">
+          <ArticleHero article={page.featuredBlogPost} />
+        </Container>
+      )}
 
       {/* Tutorial: contentful-and-the-starter-template.md */}
       {/* Uncomment the line below to make the Greeting field available to render */}
@@ -161,31 +164,21 @@ export default async function Page({ params }: NextPageProps<unknown>) {
         </Box>
 
         <Slider>
-          <SliderSlide width={20} min-width="sm">
-            <div className="grid place-items-center w-full h-80 bg-color-red-light">
-              slide 1
-            </div>
-          </SliderSlide>
-          <SliderSlide width={20} min-width="sm">
-            <div className="grid place-items-center w-full h-80 bg-color-red-light">
-              slide 2
-            </div>
-          </SliderSlide>
-          <SliderSlide width={20} min-width="sm">
-            <div className="grid place-items-center w-full h-80 bg-color-red-light">
-              slide 3
-            </div>
-          </SliderSlide>
-          <SliderSlide width={20} min-width="sm">
-            <div className="grid place-items-center w-full h-80 bg-color-red-light">
-              slide 4
-            </div>
-          </SliderSlide>
-          <SliderSlide width={20} min-width="sm">
-            <div className="grid place-items-center w-full h-80 bg-color-red-light">
-              slide 5
-            </div>
-          </SliderSlide>
+          {slides?.map((_, index) => (
+            <SliderSlide key={index} width={56} width-md={80} width-lg={96}>
+              <Box
+                display="grid"
+                place-items="center"
+                width={56}
+                width-md={80}
+                width-lg={96}
+                height={80}
+                bg-color="red-500"
+              >
+                {index}
+              </Box>
+            </SliderSlide>
+          ))}
         </Slider>
       </Container>
     </>

@@ -21,7 +21,7 @@ export function Container({
   ...props
 }: ContainerProps): ReactElement {
   const containerClassName = cn(
-    containerClassNames({ padding, fullWidth }),
+    containerClassNames({ padding, fullWidth, ...props }),
     className,
   )
   const Tag = tag
