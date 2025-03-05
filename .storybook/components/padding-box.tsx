@@ -1,7 +1,7 @@
-import { ReactElement } from 'react';
+import { ReactElement } from 'react'
 
-import { BorderBox } from './border-box';
+import { BorderBox } from './border-box'
 
 export function PaddingBox(): ReactElement {
-  return <BorderBox bgColor="pink-100" />;
+  return <BorderBox bg-color="pink-100" />
 }

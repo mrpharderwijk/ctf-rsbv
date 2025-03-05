@@ -1,5 +1,5 @@
 export const fontWeightVariants = {
-  fontWeight: {
+  'font-weight': {
     thin: 'font-thin',
     extralight: 'font-extralight',
     light: 'font-light',
@@ -10,7 +10,7 @@ export const fontWeightVariants = {
     extrabold: 'font-extrabold',
     black: 'font-black',
   },
-  'fontWeight-sm': {
+  'font-weight-sm': {
     thin: 'sm:font-thin',
     extralight: 'sm:font-extralight',
     light: 'sm:font-light',
@@ -21,7 +21,7 @@ export const fontWeightVariants = {
     extrabold: 'sm:font-extrabold',
     black: 'sm:font-black',
   },
-  'fontWeight-md': {
+  'font-weight-md': {
     thin: 'md:font-thin',
     extralight: 'md:font-extralight',
     light: 'md:font-light',
@@ -32,7 +32,7 @@ export const fontWeightVariants = {
     extrabold: 'md:font-extrabold',
     black: 'md:font-black',
   },
-  'fontWeight-lg': {
+  'font-weight-lg': {
     thin: 'lg:font-thin',
     extralight: 'lg:font-extralight',
     light: 'lg:font-light',
@@ -43,7 +43,7 @@ export const fontWeightVariants = {
     extrabold: 'lg:font-extrabold',
     black: 'lg:font-black',
   },
-  'fontWeight-xl': {
+  'font-weight-xl': {
     thin: 'xl:font-thin',
     extralight: 'xl:font-extralight',
     light: 'xl:font-light',

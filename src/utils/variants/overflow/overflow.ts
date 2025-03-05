@@ -27,60 +27,81 @@ export const overflowVariants = {
     visible: 'lg:overflow-visible',
     scroll: 'lg:overflow-scroll',
   },
-  overflowX: {
+  'overflow-xl': {
+    auto: 'xl:overflow-auto',
+    hidden: 'xl:overflow-hidden',
+    clip: 'xl:overflow-clip',
+    visible: 'xl:overflow-visible',
+    scroll: 'xl:overflow-scroll',
+  },
+  'overflow-x': {
     auto: 'overflow-x-auto',
     hidden: 'overflow-x-hidden',
     clip: 'overflow-x-clip',
     visible: 'overflow-x-visible',
     scroll: 'overflow-x-scroll',
   },
-  'overflowX-sm': {
+  'overflow-x-sm': {
     auto: 'sm:overflow-x-auto',
     hidden: 'sm:overflow-x-hidden',
     clip: 'sm:overflow-x-clip',
     visible: 'sm:overflow-x-visible',
     scroll: 'sm:overflow-x-scroll',
   },
-  'overflowX-md': {
+  'overflow-x-md': {
     auto: 'md:overflow-x-auto',
     hidden: 'md:overflow-x-hidden',
     clip: 'md:overflow-x-clip',
     visible: 'md:overflow-x-visible',
     scroll: 'md:overflow-x-scroll',
   },
-  'overflowX-lg': {
+  'overflow-x-lg': {
     auto: 'lg:overflow-x-auto',
     hidden: 'lg:overflow-x-hidden',
     clip: 'lg:overflow-x-clip',
     visible: 'lg:overflow-x-visible',
     scroll: 'lg:overflow-x-scroll',
   },
-  overflowY: {
+  'overflow-x-xl': {
+    auto: 'xl:overflow-x-auto',
+    hidden: 'xl:overflow-x-hidden',
+    clip: 'xl:overflow-x-clip',
+    visible: 'xl:overflow-x-visible',
+    scroll: 'xl:overflow-x-scroll',
+  },
+  'overflow-y': {
     auto: 'overflow-y-auto',
     hidden: 'overflow-y-hidden',
     clip: 'overflow-y-clip',
     visible: 'overflow-y-visible',
     scroll: 'overflow-y-scroll',
   },
-  'overflowY-sm': {
+  'overflow-y-sm': {
     auto: 'sm:overflow-y-auto',
     hidden: 'sm:overflow-y-hidden',
     clip: 'sm:overflow-y-clip',
     visible: 'sm:overflow-y-visible',
     scroll: 'sm:overflow-y-scroll',
   },
-  'overflowY-md': {
+  'overflow-y-md': {
     auto: 'md:overflow-y-auto',
     hidden: 'md:overflow-y-hidden',
     clip: 'md:overflow-y-clip',
     visible: 'md:overflow-y-visible',
     scroll: 'md:overflow-y-scroll',
   },
-  'overflowY-lg': {
+  'overflow-y-lg': {
     auto: 'lg:overflow-y-auto',
     hidden: 'lg:overflow-y-hidden',
     clip: 'lg:overflow-y-clip',
     visible: 'lg:overflow-y-visible',
     scroll: 'lg:overflow-y-scroll',
+  },
+  'overflow-y-xl': {
+    auto: 'xl:overflow-y-auto',
+    hidden: 'xl:overflow-y-hidden',
+    clip: 'xl:overflow-y-clip',
+    visible: 'xl:overflow-y-visible',
+    scroll: 'xl:overflow-y-scroll',
   },
 }

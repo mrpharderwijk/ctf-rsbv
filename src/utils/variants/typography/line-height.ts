@@ -1,5 +1,5 @@
 export const lineHeightVariants = {
-  lineHeight: {
+  'line-height': {
     3: 'leading-3',
     4: 'leading-4',
     5: 'leading-5',
@@ -22,7 +22,7 @@ export const lineHeightVariants = {
     '2xl': 'leading-2xl',
     '3xl': 'leading-3xl',
   },
-  'lineHeight-sm': {
+  'line-height-sm': {
     3: 'sm:leading-3',
     4: 'sm:leading-4',
     5: 'sm:leading-5',
@@ -45,7 +45,7 @@ export const lineHeightVariants = {
     '2xl': 'sm:leading-2xl',
     '3xl': 'sm:leading-3xl',
   },
-  'lineHeight-md': {
+  'line-height-md': {
     3: 'md:leading-3',
     4: 'md:leading-4',
     5: 'md:leading-5',
@@ -68,7 +68,7 @@ export const lineHeightVariants = {
     '2xl': 'md:leading-2xl',
     '3xl': 'md:leading-3xl',
   },
-  'lineHeight-lg': {
+  'line-height-lg': {
     3: 'lg:leading-3',
     4: 'lg:leading-4',
     5: 'lg:leading-5',
@@ -91,7 +91,7 @@ export const lineHeightVariants = {
     '2xl': 'lg:leading-2xl',
     '3xl': 'lg:leading-3xl',
   },
-  'lineHeight-xl': {
+  'line-height-xl': {
     3: 'xl:leading-3',
     4: 'xl:leading-4',
     5: 'xl:leading-5',

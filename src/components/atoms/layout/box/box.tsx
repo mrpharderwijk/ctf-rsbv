@@ -1,26 +1,37 @@
 import { type VariantProps } from 'class-variance-authority'
-import { PropsWithChildren, ReactElement } from 'react'
+import { PropsWithChildren, ReactElement, RefObject } from 'react'
 
 import { boxClassnames } from './box.class-names'
 
 import { ElementTag, PropsWithTestId } from '@/types'
 import { cn } from '@/utils/class-names'
 
-type BoxStylesProps = VariantProps<typeof boxClassnames> &
-  PropsWithChildren<PropsWithTestId<ElementTag>>
-
-export type BoxProps = BoxStylesProps
+export type BoxProps = VariantProps<typeof boxClassnames> &
+  PropsWithChildren<
+    PropsWithTestId<
+      | ElementTag
+      | {
+          tag?: 'ul' | 'li'
+        }
+    > & { ref?: RefObject<any>; id?: string }
+  >
 
 export function Box({
   tag = 'div',
+  id,
   children,
   'data-testid': testId,
+  ref,
   ...boxProps
 }: BoxProps): ReactElement {
   const Tag = tag
+  const boxClassName = cn(
+    boxClassnames({ ...boxProps }),
+    ...['scrollbar-hidden'],
+  )
 
   return (
-    <Tag data-testid={testId} className={cn(boxClassnames({ ...boxProps }))}>
+    <Tag id={id} data-testid={testId} className={boxClassName} ref={ref}>
       {children}
     </Tag>
   )

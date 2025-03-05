@@ -6,7 +6,12 @@ import { Body } from '@/components/atoms/typography/body/body'
 
 export function Branding(): ReactElement {
   return (
-    <Box display="flex" alignItems="center" justifyContent="center" gap-x="1.5">
+    <Box
+      display="flex"
+      align-items="center"
+      justify-content="center"
+      gap-x="1.5"
+    >
       <Link href="/">
         <svg
           width="36"
@@ -47,7 +52,7 @@ export function Branding(): ReactElement {
         </svg>
       </Link>
       <Link href="/" className="p-2">
-        <Body tag="span" size="smd" fontWeight="semibold" data-testid="logo">
+        <Body tag="span" size="smd" font-weight="semibold" data-testid="logo">
           Newsroom
         </Body>
       </Link>

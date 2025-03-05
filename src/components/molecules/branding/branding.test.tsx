@@ -32,8 +32,8 @@ describe('Branding', () => {
     expect(BoxMock).toHaveBeenCalledWith(
       {
         display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
+        'align-items': 'center',
+        'justify-content': 'center',
         'gap-x': '1.5',
         children: expect.anything(),
       },
@@ -62,7 +62,7 @@ describe('Branding', () => {
       {
         tag: 'span',
         size: 'smd',
-        fontWeight: 'semibold',
+        'font-weight': 'semibold',
         'data-testid': 'logo',
         children: 'Newsroom',
       },

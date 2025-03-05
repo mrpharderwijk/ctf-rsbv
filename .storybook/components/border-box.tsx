@@ -11,11 +11,11 @@ type BorderBoxProps = PropsWithChildren<
     | 'left'
     | 'right'
     | 'bottom'
-    | 'zIndex'
+    | 'z-index'
     | 'border'
-    | 'bgColor'
-    | 'borderStyle'
-    | 'borderColor'
+    | 'bg-color'
+    | 'border-style'
+    | 'border-color'
     | 'opacity'
     | 'overflow'
     | 'gap'
@@ -34,13 +34,13 @@ export function BorderBox({
     left = 0,
     right = 0,
     bottom = 0,
-    zIndex = 20,
+    'z-index': zIndex = 20,
     border = 'px',
-    borderStyle = 'dashed',
-    borderColor = 'gray-400',
+    'border-style': borderStyle = 'dashed',
+    'border-color': borderColor = 'gray-lighter',
     opacity = 75,
     overflow = 'hidden',
-    bgColor = 'transparent',
+    'bg-color': bgColor = 'transparent',
   } = props
   return (
     <Box
@@ -51,11 +51,11 @@ export function BorderBox({
       left={left}
       right={right}
       bottom={bottom}
-      zIndex={zIndex}
+      z-index={zIndex}
       border={border}
-      borderStyle={borderStyle}
+      border-style={borderStyle}
       border-color={borderColor}
-      bgColor={bgColor}
+      bg-color={bgColor}
       opacity={opacity}
       overflow={overflow}
     >

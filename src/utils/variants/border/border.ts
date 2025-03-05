@@ -1,6 +1,7 @@
 export const borderVariants = {
   border: {
     0: 'border-0',
+    1: 'border',
     2: 'border-2',
     4: 'border-4',
     8: 'border-8',
@@ -9,6 +10,7 @@ export const borderVariants = {
   },
   'border-sm': {
     0: 'sm:border-0',
+    1: 'sm:border',
     2: 'sm:border-2',
     4: 'sm:border-4',
     8: 'sm:border-8',
@@ -17,6 +19,7 @@ export const borderVariants = {
   },
   'border-md': {
     0: 'md:border-0',
+    1: 'md:border',
     2: 'md:border-2',
     4: 'md:border-4',
     8: 'md:border-8',
@@ -25,6 +28,7 @@ export const borderVariants = {
   },
   'border-lg': {
     0: 'lg:border-0',
+    1: 'lg:border',
     2: 'lg:border-2',
     4: 'lg:border-4',
     8: 'lg:border-8',
@@ -33,6 +37,7 @@ export const borderVariants = {
   },
   'border-xl': {
     0: 'xl:border-0',
+    1: 'xl:border',
     2: 'xl:border-2',
     4: 'xl:border-4',
     8: 'xl:border-8',
@@ -41,6 +46,7 @@ export const borderVariants = {
   },
   'border-t': {
     0: 'border-t-0',
+    1: 'border-t',
     2: 'border-t-2',
     4: 'border-t-4',
     8: 'border-t-8',
@@ -49,6 +55,7 @@ export const borderVariants = {
   },
   'border-t-sm': {
     0: 'sm:border-t-0',
+    1: 'sm:border-t',
     2: 'sm:border-t-2',
     4: 'sm:border-t-4',
     8: 'sm:border-t-8',
@@ -57,6 +64,7 @@ export const borderVariants = {
   },
   'border-t-md': {
     0: 'md:border-t-0',
+    1: 'md:border-t',
     2: 'md:border-t-2',
     4: 'md:border-t-4',
     8: 'md:border-t-8',
@@ -65,6 +73,7 @@ export const borderVariants = {
   },
   'border-t-lg': {
     0: 'lg:border-t-0',
+    1: 'lg:border-t',
     2: 'lg:border-t-2',
     4: 'lg:border-t-4',
     8: 'lg:border-t-8',
@@ -73,6 +82,7 @@ export const borderVariants = {
   },
   'border-t-xl': {
     0: 'xl:border-t-0',
+    1: 'xl:border-t',
     2: 'xl:border-t-2',
     4: 'xl:border-t-4',
     8: 'xl:border-t-8',
@@ -81,6 +91,7 @@ export const borderVariants = {
   },
   'border-b': {
     0: 'border-b-0',
+    1: 'border-b',
     2: 'border-b-2',
     4: 'border-b-4',
     8: 'border-b-8',
@@ -88,6 +99,7 @@ export const borderVariants = {
   },
   'border-b-sm': {
     0: 'sm:border-b-0',
+    1: 'sm:border-b',
     2: 'sm:border-b-2',
     4: 'sm:border-b-4',
     8: 'sm:border-b-8',
@@ -96,6 +108,7 @@ export const borderVariants = {
   },
   'border-b-md': {
     0: 'md:border-b-0',
+    1: 'md:border-b',
     2: 'md:border-b-2',
     4: 'md:border-b-4',
     8: 'md:border-b-8',
@@ -104,6 +117,7 @@ export const borderVariants = {
   },
   'border-b-lg': {
     0: 'lg:border-b-0',
+    1: 'lg:border-b',
     2: 'lg:border-b-2',
     4: 'lg:border-b-4',
     8: 'lg:border-b-8',
@@ -112,6 +126,7 @@ export const borderVariants = {
   },
   'border-b-xl': {
     0: 'xl:border-b-0',
+    1: 'xl:border-b',
     2: 'xl:border-b-2',
     4: 'xl:border-b-4',
     8: 'xl:border-b-8',
@@ -120,6 +135,7 @@ export const borderVariants = {
   },
   'border-r': {
     0: 'border-r-0',
+    1: 'border-r',
     2: 'border-r-2',
     4: 'border-r-4',
     8: 'border-r-8',
@@ -128,6 +144,7 @@ export const borderVariants = {
   },
   'border-r-sm': {
     0: 'sm:border-r-0',
+    1: 'sm:border-r',
     2: 'sm:border-r-2',
     4: 'sm:border-r-4',
     8: 'sm:border-r-8',
@@ -136,6 +153,7 @@ export const borderVariants = {
   },
   'border-r-md': {
     0: 'md:border-r-0',
+    1: 'md:border-r',
     2: 'md:border-r-2',
     4: 'md:border-r-4',
     8: 'md:border-r-8',
@@ -144,6 +162,7 @@ export const borderVariants = {
   },
   'border-r-lg': {
     0: 'lg:border-r-0',
+    1: 'lg:border-r',
     2: 'lg:border-r-2',
     4: 'lg:border-r-4',
     8: 'lg:border-r-8',
@@ -152,6 +171,7 @@ export const borderVariants = {
   },
   'border-r-xl': {
     0: 'xl:border-r-0',
+    1: 'xl:border-r',
     2: 'xl:border-r-2',
     4: 'xl:border-r-4',
     8: 'xl:border-r-8',
@@ -160,6 +180,7 @@ export const borderVariants = {
   },
   'border-l': {
     0: 'border-l-0',
+    1: 'border-l',
     2: 'border-l-2',
     4: 'border-l-4',
     8: 'border-l-8',
@@ -168,6 +189,7 @@ export const borderVariants = {
   },
   'border-l-sm': {
     0: 'sm:border-l-0',
+    1: 'sm:border-l',
     2: 'sm:border-l-2',
     4: 'sm:border-l-4',
     8: 'sm:border-l-8',
@@ -176,6 +198,7 @@ export const borderVariants = {
   },
   'border-l-md': {
     0: 'md:border-l-0',
+    1: 'md:border-l',
     2: 'md:border-l-2',
     4: 'md:border-l-4',
     8: 'md:border-l-8',
@@ -184,6 +207,7 @@ export const borderVariants = {
   },
   'border-l-lg': {
     0: 'lg:border-l-0',
+    1: 'lg:border-l',
     2: 'lg:border-l-2',
     4: 'lg:border-l-4',
     8: 'lg:border-l-8',
@@ -192,6 +216,7 @@ export const borderVariants = {
   },
   'border-l-xl': {
     0: 'xl:border-l-0',
+    1: 'xl:border-l',
     2: 'xl:border-l-2',
     4: 'xl:border-l-4',
     8: 'xl:border-l-8',
@@ -200,6 +225,7 @@ export const borderVariants = {
   },
   'border-y': {
     0: 'border-y-0',
+    1: 'border-y',
     2: 'border-y-2',
     4: 'border-y-4',
     8: 'border-y-8',
@@ -208,6 +234,7 @@ export const borderVariants = {
   },
   'border-y-sm': {
     0: 'sm:border-y-0',
+    1: 'sm:border-y',
     2: 'sm:border-y-2',
     4: 'sm:border-y-4',
     8: 'sm:border-y-8',
@@ -216,6 +243,7 @@ export const borderVariants = {
   },
   'border-y-md': {
     0: 'md:border-y-0',
+    1: 'md:border-y',
     2: 'md:border-y-2',
     4: 'md:border-y-4',
     8: 'md:border-y-8',
@@ -224,6 +252,7 @@ export const borderVariants = {
   },
   'border-y-lg': {
     0: 'lg:border-y-0',
+    1: 'lg:border-y',
     2: 'lg:border-y-2',
     4: 'lg:border-y-4',
     8: 'lg:border-y-8',
@@ -232,6 +261,7 @@ export const borderVariants = {
   },
   'border-y-xl': {
     0: 'xl:border-y-0',
+    1: 'xl:border-y',
     2: 'xl:border-y-2',
     4: 'xl:border-y-4',
     8: 'xl:border-y-8',
@@ -240,6 +270,7 @@ export const borderVariants = {
   },
   'border-x': {
     0: 'border-x-0',
+    1: 'border-x',
     2: 'border-x-2',
     4: 'border-x-4',
     8: 'border-x-8',
@@ -248,6 +279,7 @@ export const borderVariants = {
   },
   'border-x-sm': {
     0: 'sm:border-x-0',
+    1: 'sm:border-x',
     2: 'sm:border-x-2',
     4: 'sm:border-x-4',
     8: 'sm:border-x-8',
@@ -256,6 +288,7 @@ export const borderVariants = {
   },
   'border-x-md': {
     0: 'md:border-x-0',
+    1: 'md:border-x',
     2: 'md:border-x-2',
     4: 'md:border-x-4',
     8: 'md:border-x-8',
@@ -264,6 +297,7 @@ export const borderVariants = {
   },
   'border-x-lg': {
     0: 'lg:border-x-0',
+    1: 'lg:border-x',
     2: 'lg:border-x-2',
     4: 'lg:border-x-4',
     8: 'lg:border-x-8',
@@ -272,6 +306,7 @@ export const borderVariants = {
   },
   'border-x-xl': {
     0: 'xl:border-x-0',
+    1: 'xl:border-x',
     2: 'xl:border-x-2',
     4: 'xl:border-x-4',
     8: 'xl:border-x-8',

@@ -2,6 +2,18 @@
 
 @plugin '@tailwindcss/typography';
 
+@layer utilities {
+  /* Chrome, Safari and Opera */
+  .scrollbar-hidden::-webkit-scrollbar {
+    display: none;
+  }
+
+  .scrollbar-hidden {
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+  }
+}
+
 @theme {
   /* old */
   --color-*: initial;
@@ -159,6 +171,9 @@
   --text-smd: 1.125rem;
   --text-smd--line-height: 1;
 
+  --text-alt: 1.25rem;
+  --text-alt--line-height: 1.3636363636;
+
   --text-base: 1.375rem;
   --text-base--line-height: 1.1818181818;
   --text-md: var(--text-base);
@@ -182,6 +197,7 @@
   --leading-xl: var(--text-xl--line-height);
   --leading-2xl: 1.2222222222;
   --leading-3xl: 1.2727272727;
+  --leading-4xl: var(--text-alt--line-height);
 
   --font-sans:
     var(--font-main-font), ui-sans-serif, system-ui, sans-serif,
@@ -217,7 +233,7 @@
 
 @layer base {
   body {
-    @apply text-sm text-black md:text-sm bg-gray100;
+    @apply text-sm text-text-black md:text-sm bg-gray100;
   }
 
   /* TODO: REMOVE or define

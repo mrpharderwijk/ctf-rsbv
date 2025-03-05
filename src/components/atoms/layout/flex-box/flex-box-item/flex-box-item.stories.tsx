@@ -47,10 +47,10 @@ const TemplateRow: StoryFn = (args: FlexBoxItemProps) => (
               right={0}
               bottom={0}
               left={0}
-              zIndex={10}
+              z-index={10}
             />
-            <Box position="relative" zIndex={30}>
-              <FlexBox justifyContent="around" gap={4}>
+            <Box position="relative" z-index={30}>
+              <FlexBox justify-content="around" gap={4}>
                 <FlexBox.Item>FlexBox.Item</FlexBox.Item>
                 <FlexBox.Item>
                   <dl>
@@ -72,10 +72,10 @@ const TemplateRow: StoryFn = (args: FlexBoxItemProps) => (
               right={0}
               bottom={0}
               left={0}
-              zIndex={10}
+              z-index={10}
             />
-            <Box position="relative" zIndex={30}>
-              <FlexBox flexDirection="col" justifyContent="around" gap={4}>
+            <Box position="relative" z-index={30}>
+              <FlexBox flex-direction="col" justify-content="around" gap={4}>
                 <FlexBox.Item>FlexBox.Item</FlexBox.Item>
                 <FlexBox.Item>
                   <dl className="flex gap-4">
@@ -118,17 +118,17 @@ FlexBoxRowItems.args = {
 const TemplateColumn: StoryFn = (args: FlexBoxItemProps) => (
   <BorderBox position="relative">
     <MarginBox />
-    <FlexBox flexDirection="col" gap={4} padding={4}>
+    <FlexBox flex-direction="col" gap={4} padding={4}>
       <FlexBox.Item {...args}>
         <Rectangle position="absolute" spread />
-        <BorderBox position="absolute" zIndex={20} spread />
-        <Box position="relative" zIndex={30}>
-          <FlexBox justifyContent="around">
+        <BorderBox position="absolute" z-index={20} spread />
+        <Box position="relative" z-index={30}>
+          <FlexBox justify-content="around">
             <FlexBox.Item>FlexBox.Item</FlexBox.Item>
             <FlexBox.Item>
               <dl>
                 <dt>FlexBasis:</dt>
-                <dd>{args.flexBasis}</dd>
+                <dd>{args?.['flex-basis']}</dd>
               </dl>
             </FlexBox.Item>
           </FlexBox>
@@ -136,14 +136,14 @@ const TemplateColumn: StoryFn = (args: FlexBoxItemProps) => (
       </FlexBox.Item>
       <FlexBox.Item {...args}>
         <Rectangle position="absolute" spread />
-        <BorderBox position="absolute" zIndex={20} spread />
-        <Box position="relative" zIndex={30}>
-          <FlexBox justifyContent="around">
+        <BorderBox position="absolute" z-index={20} spread />
+        <Box position="relative" z-index={30}>
+          <FlexBox justify-content="around">
             <FlexBox.Item>FlexBox.Item</FlexBox.Item>
             <FlexBox.Item>
               <dl>
                 <dt>FlexBasis:</dt>
-                <dd>{args.flexBasis}</dd>
+                <dd>{args?.['flex-basis']}</dd>
               </dl>
             </FlexBox.Item>
           </FlexBox>
@@ -173,6 +173,6 @@ FlexBoxColumnItems.parameters = {
   },
 }
 FlexBoxColumnItems.args = {
-  flexBasis: '1/2',
+  'flex-basis': '1/2',
   padding: 4,
 }

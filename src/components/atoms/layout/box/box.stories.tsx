@@ -16,10 +16,10 @@ type Story = StoryObj<typeof Box>
 
 export const Margin: Story = {
   render: () => (
-    <MarginBox position="relative" float="left" bgColor="yellow-100">
+    <MarginBox position="relative" float="left" bg-color="yellow-100">
       <Box tag="aside" margin={4} position="relative">
-        <BorderBox zIndex={30} />
-        <Rectangle position="absolute" spread zIndex={10} />
+        <BorderBox z-index={30} />
+        <Rectangle position="absolute" spread z-index={10} />
         <span className="z-10 relative">Hello, World!</span>
       </Box>
     </MarginBox>

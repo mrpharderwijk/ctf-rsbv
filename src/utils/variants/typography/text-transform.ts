@@ -1,29 +1,29 @@
 export const textTransformVariants = {
-  textTransform: {
+  'text-transform': {
     uppercase: 'uppercase',
     lowercase: 'lowercase',
     capitalize: 'capitalize',
     'normal-case': 'normal-case',
   },
-  'textTransform-sm': {
+  'text-transform-sm': {
     uppercase: 'sm:uppercase',
     lowercase: 'sm:lowercase',
     capitalize: 'sm:capitalize',
     'normal-case': 'sm:normal-case',
   },
-  'textTransform-md': {
+  'text-transform-md': {
     uppercase: 'md:uppercase',
     lowercase: 'md:lowercase',
     capitalize: 'md:capitalize',
     'normal-case': 'md:normal-case',
   },
-  'textTransform-lg': {
+  'text-transform-lg': {
     uppercase: 'lg:uppercase',
     lowercase: 'lg:lowercase',
     capitalize: 'lg:capitalize',
     'normal-case': 'lg:normal-case',
   },
-  'textTransform-xl': {
+  'text-transform-xl': {
     uppercase: 'xl:uppercase',
     lowercase: 'xl:lowercase',
     capitalize: 'xl:capitalize',

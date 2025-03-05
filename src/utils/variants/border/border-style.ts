@@ -1,5 +1,5 @@
 export const borderStyleVariants = {
-  borderStyle: {
+  'border-style': {
     none: 'border-none',
     solid: 'border-solid',
     dashed: 'border-dashed',
@@ -10,7 +10,7 @@ export const borderStyleVariants = {
     inset: 'border-inset',
     outset: 'border-outset',
   },
-  'borderStyle-sm': {
+  'border-style-sm': {
     none: 'sm:border-none',
     solid: 'sm:border-solid',
     dashed: 'sm:border-dashed',
@@ -21,7 +21,7 @@ export const borderStyleVariants = {
     inset: 'sm:border-inset',
     outset: 'sm:border-outset',
   },
-  'borderStyle-md': {
+  'border-style-md': {
     none: 'md:border-none',
     solid: 'md:border-solid',
     dashed: 'md:border-dashed',
@@ -32,7 +32,7 @@ export const borderStyleVariants = {
     inset: 'md:border-inset',
     outset: 'md:border-outset',
   },
-  'borderStyle-lg': {
+  'border-style-lg': {
     none: 'lg:border-none',
     solid: 'lg:border-solid',
     dashed: 'lg:border-dashed',
@@ -42,5 +42,16 @@ export const borderStyleVariants = {
     ridge: 'lg:border-ridge',
     inset: 'lg:border-inset',
     outset: 'lg:border-outset',
+  },
+  'border-style-xl': {
+    none: 'xl:border-none',
+    solid: 'xl:border-solid',
+    dashed: 'xl:border-dashed',
+    dotted: 'xl:border-dotted',
+    double: 'xl:border-double',
+    groove: 'xl:border-groove',
+    ridge: 'xl:border-ridge',
+    inset: 'xl:border-inset',
+    outset: 'xl:border-outset',
   },
 }

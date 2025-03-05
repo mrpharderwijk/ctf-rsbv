@@ -1,25 +1,25 @@
-import { PropsWithChildren, ReactElement } from 'react';
+import { PropsWithChildren, ReactElement } from 'react'
 
-import { Box, BoxProps } from '@/components/atoms/layout/box/box';
+import { Box, BoxProps } from '@/components/atoms/layout/box/box'
 
 type RectangleProps = PropsWithChildren<
-  Pick<BoxProps, 'position' | 'spread' | 'zIndex'>
->;
+  Pick<BoxProps, 'position' | 'spread' | 'z-index'>
+>
 
 export function Rectangle({
   children,
   position = 'relative',
   spread,
-  zIndex,
+  'z-index': zIndex,
 }: RectangleProps): ReactElement {
   return (
     <Box
       data-testid="rectangle"
       position={position}
       spread={spread}
-      zIndex={zIndex}
+      z-index={zIndex}
     >
-      <Box position="absolute" spread zIndex={20}>
+      <Box position="absolute" spread z-index={20}>
         <svg
           className="absolute inset-0 h-full w-full bg-white stroke-gray-900/10"
           fill="none"
@@ -45,10 +45,10 @@ export function Rectangle({
         </svg>
       </Box>
       {!!children && (
-        <Box position="relative" zIndex={30}>
+        <Box position="relative" z-index={30}>
           {children}
         </Box>
       )}
     </Box>
-  );
+  )
 }

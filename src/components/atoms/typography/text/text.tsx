@@ -1,7 +1,7 @@
 import { VariantProps } from 'class-variance-authority'
 import { PropsWithChildren, ReactElement } from 'react'
 
-import { textClassNames } from '@/components/atoms/typography/text/text-class-names'
+import { textClassNames } from '@/components/atoms/typography/text/text.class-names'
 import { PropsWithTestId, TextElementTag } from '@/types'
 
 export type TextProps = PropsWithChildren<

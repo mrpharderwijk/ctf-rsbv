@@ -19,6 +19,7 @@ import {
   justifyContentVariants,
   orderVariants,
 } from '@/utils/variants/flex-box'
+import { placeItemsVariants } from '@/utils/variants/flex-box/place-items'
 import { marginVariants } from '@/utils/variants/margin'
 import { opacityVariants } from '@/utils/variants/opacity'
 import { overflowVariants } from '@/utils/variants/overflow'
@@ -32,11 +33,15 @@ import {
   topVariants,
   zIndexVariants,
 } from '@/utils/variants/position'
+import { snapVariants } from '@/utils/variants/position/snap'
+import { snapAlignVariants } from '@/utils/variants/position/snap-align'
+import { snapTypeVariants } from '@/utils/variants/position/snap-type'
 import {
   heightVariants,
   maxWidthVariants,
   widthVariants,
 } from '@/utils/variants/sizing'
+import { minWidthVariants } from '@/utils/variants/sizing/min-width'
 
 export const boxClassnames = cva('', {
   variants: {
@@ -55,6 +60,7 @@ export const boxClassnames = cva('', {
     ...orderVariants,
     ...gapVariants,
     ...flexBasisVariants,
+    ...placeItemsVariants,
 
     /**
      * Spacing
@@ -73,6 +79,9 @@ export const boxClassnames = cva('', {
     ...zIndexVariants,
     ...overflowVariants,
     ...floatVariants,
+    ...snapVariants,
+    ...snapTypeVariants,
+    ...snapAlignVariants,
 
     /**
      * Sizing
@@ -80,6 +89,7 @@ export const boxClassnames = cva('', {
     ...heightVariants,
     ...widthVariants,
     ...maxWidthVariants,
+    ...minWidthVariants,
 
     ...borderVariants,
     ...borderStyleVariants,

@@ -1,21 +1,21 @@
 export const borderColorVariants = {
-  borderColor: {
+  'border-color': {
     'gray-light': 'border-gray-light',
     'gray-lighter': 'border-gray-lighter',
   },
-  'borderColor-sm': {
+  'border-color-sm': {
     'gray-light': 'sm:border-gray-light',
     'gray-lighter': 'sm:border-gray-lighter',
   },
-  'borderColor-md': {
+  'border-color-md': {
     'gray-light': 'md:border-gray-light',
     'gray-lighter': 'md:border-gray-lighter',
   },
-  'borderColor-lg': {
+  'border-color-lg': {
     'gray-light': 'lg:border-gray-light',
     'gray-lighter': 'lg:border-gray-lighter',
   },
-  'borderColor-xl': {
+  'border-color-xl': {
     'gray-light': 'xl:border-gray-light',
     'gray-lighter': 'xl:border-gray-lighter',
   },

@@ -3,9 +3,10 @@ import { draftMode } from 'next/headers'
 import { notFound } from 'next/navigation'
 
 import { Container } from '@/components/atoms/layout/container/container'
+import { Heading } from '@/components/atoms/typography/heading/heading'
+import { ArticleContent } from '@/features/article/article-content/article-content'
 import { ArticleHero } from '@/features/article/article-hero/article-hero'
 import { ArticleTileGrid } from '@/features/article/article-tile-grid/article-tile-grid'
-import { ArticleContent } from '@/features/article/ArticleContent'
 import { defaultLocale, locales } from '@/features/i18n/utils/config'
 import { initTranslations } from '@/features/i18n/utils/init-translations'
 import { client, previewClient } from '@/lib/client'
@@ -121,7 +122,7 @@ export default async function Page({ params }: BlogPageProps) {
       </Container>
       {relatedPosts && (
         <Container className="mt-8 max-w-5xl">
-          <h2 className="mb-4 md:mb-6">{t('article.relatedArticles')}</h2>
+          <Heading tag="h2">{t('article.relatedArticles')}</Heading>
           <ArticleTileGrid articles={relatedPosts} />
         </Container>
       )}

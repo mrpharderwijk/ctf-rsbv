@@ -16,15 +16,15 @@ export function FooterDisclaimer({
     <Box
       border-b="px"
       border-b-md="px"
-      borderColor="gray-light"
+      border-color="gray-light"
       display="flex"
-      flexDirection="col"
+      flex-direction="col"
       padding-b={6}
       padding-b-xl={12}
     >
-      <Box display="flex" flexDirection="col" max-w="2xl" gap-y={3}>
+      <Box display="flex" flex-direction="col" max-w="2xl" gap-y={3}>
         {!!title && (
-          <Heading tag="h4" like="h6">
+          <Heading tag="h4" like="h5" font-weight="bold">
             {title}
           </Heading>
         )}

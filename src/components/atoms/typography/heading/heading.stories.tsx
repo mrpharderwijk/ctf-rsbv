@@ -21,7 +21,7 @@ export const Overview: Story = {
     const headingsArray = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6']
 
     return (
-      <FlexBox flexDirection="col">
+      <FlexBox flex-direction="col">
         <FlexBoxItem>
           {headingsArray.map((heading, index) => (
             <Heading key={index} tag={heading as HeadingProps['tag']}>

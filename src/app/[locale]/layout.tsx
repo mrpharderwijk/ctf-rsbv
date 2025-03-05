@@ -1,7 +1,7 @@
 import clsx from 'clsx'
 import { dir } from 'i18next'
 import type { Metadata, Viewport } from 'next'
-import { Figtree } from 'next/font/google'
+import { Poppins } from 'next/font/google'
 import { draftMode } from 'next/headers'
 import { PropsWithChildren } from 'react'
 
@@ -30,7 +30,11 @@ export async function generateStaticParams() {
   return locales.map((locale) => ({ locale }))
 }
 
-const mainFont = Figtree({ subsets: ['latin'], variable: '--main-font' })
+const mainFont = Poppins({
+  subsets: ['latin'],
+  variable: '--main-font',
+  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
+})
 
 const allowedOriginList = [
   'https://app.contentful.com',
@@ -72,7 +76,9 @@ export default async function RootLayout({ children, params }: LayoutProps) {
       <body className={bodyClassNames}>
         <AppProvider {...appProviderProps}>
           <Header />
-          <main className="pt-12 md:pt-20">{children}</main>
+          <main className="flex flex-col items-center gap-12 md:gap-10 lg:gap-16 py-6 md:py-10 lg:py-16">
+            {children}
+          </main>
           <Footer />
         </AppProvider>
       </body>

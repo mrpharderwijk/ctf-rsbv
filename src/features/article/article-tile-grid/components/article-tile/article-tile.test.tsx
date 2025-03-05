@@ -8,9 +8,8 @@ import { render } from '@testing-library/react'
 
 import { ArticleTile } from './article-tile'
 
-import { FormatDate } from '@/components/atoms/format-date/format-date'
-import { Body } from '@/components/atoms/typography/body/body'
 import { Heading } from '@/components/atoms/typography/heading/heading'
+import { ArticleDate } from '@/features/article/article-date/article-date'
 import { CtfImage } from '@/features/contentful/components/contentful-image/contentful-image'
 import { PageBlogPostFieldsFragment } from '@/lib/__generated/sdk'
 
@@ -39,15 +38,10 @@ const HeadingMock = jest
   .mocked(Heading)
   .mockImplementation(jest.fn(({ children }) => <div>{children}</div>))
 
-jest.mock('@/components/atoms/typography/body/body')
-const BodyMock = jest
-  .mocked(Body)
-  .mockImplementation(jest.fn(({ children }) => <div>{children}</div>))
-
-jest.mock('@/components/atoms/format-date/format-date', () => ({
-  FormatDate: jest.fn(),
+jest.mock('@/features/article/article-date/article-date', () => ({
+  ArticleDate: jest.fn(),
 }))
-const FormatDateMock = jest.mocked(FormatDate)
+const ArticleDateMock = jest.mocked(ArticleDate)
 
 describe('ArticleTile', () => {
   const articleMock: PageBlogPostFieldsFragment = {
@@ -104,26 +98,19 @@ describe('ArticleTile', () => {
     expect(HeadingMock).toHaveBeenCalledWith(
       {
         tag: 'h3',
-        like: 'h5',
         children: 'Test Article',
+        'font-size': 'smd',
+        'font-weight': 'semibold',
+        'line-height': '2xl',
       },
       undefined,
     )
 
-    expect(BodyMock).toHaveBeenCalledTimes(1)
-    expect(BodyMock).toHaveBeenCalledWith(
+    expect(ArticleDateMock).toHaveBeenCalledTimes(1)
+    expect(ArticleDateMock).toHaveBeenCalledWith(
       {
-        color: 'gray',
-        size: 'sm',
-        fontWeight: 'light',
-        children: expect.anything(),
+        publishedDate: '2023-01-01',
       },
-      undefined,
-    )
-
-    expect(FormatDateMock).toHaveBeenCalledTimes(1)
-    expect(FormatDateMock).toHaveBeenCalledWith(
-      { date: '2023-01-01' },
       undefined,
     )
   })

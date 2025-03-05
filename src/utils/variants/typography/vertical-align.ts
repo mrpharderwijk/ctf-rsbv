@@ -1,5 +1,5 @@
 export const verticalAlignVariants = {
-  verticalAlign: {
+  'vertical-align': {
     baseline: 'align-baseline',
     top: 'align-top',
     middle: 'align-middle',
@@ -9,7 +9,7 @@ export const verticalAlignVariants = {
     sub: 'align-sub',
     super: 'align-super',
   },
-  'verticalAlign-sm': {
+  'vertical-align-sm': {
     baseline: 'sm:align-baseline',
     top: 'sm:align-top',
     middle: 'sm:align-middle',
@@ -19,7 +19,7 @@ export const verticalAlignVariants = {
     sub: 'sm:align-sub',
     super: 'sm:align-super',
   },
-  'verticalAlign-md': {
+  'vertical-align-md': {
     baseline: 'md:align-baseline',
     top: 'md:align-top',
     middle: 'md:align-middle',
@@ -29,7 +29,7 @@ export const verticalAlignVariants = {
     sub: 'md:align-sub',
     super: 'md:align-super',
   },
-  'verticalAlign-lg': {
+  'vertical-align-lg': {
     baseline: 'lg:align-baseline',
     top: 'lg:align-top',
     middle: 'lg:align-middle',
@@ -39,7 +39,7 @@ export const verticalAlignVariants = {
     sub: 'lg:align-sub',
     super: 'lg:align-super',
   },
-  'verticalAlign-xl': {
+  'vertical-align-xl': {
     baseline: 'xl:align-baseline',
     top: 'xl:align-top',
     middle: 'xl:align-middle',

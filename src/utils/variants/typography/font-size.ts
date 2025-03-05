@@ -1,44 +1,49 @@
 export const fontSizeVariants = {
-  fontSize: {
+  'font-size': {
     xs: 'text-xs',
     sm: 'text-sm',
     smd: 'text-smd',
+    alt: 'text-alt',
     base: 'text-base',
     md: 'text-base',
     lg: 'text-lg',
     xl: 'text-xl',
   },
-  'fontSize-sm': {
+  'font-size-sm': {
     xs: 'sm:text-xs',
     sm: 'sm:text-sm',
     smd: 'sm:text-smd',
+    alt: 'sm:text-alt',
     base: 'sm:text-base',
     md: 'sm:text-base',
     lg: 'sm:text-lg',
     xl: 'sm:text-xl',
   },
-  'fontSize-md': {
+  'font-size-md': {
     xs: 'md:text-xs',
     sm: 'md:text-sm',
     smd: 'md:text-smd',
+    alt: 'md:text-alt',
     base: 'md:text-base',
     md: 'md:text-base',
     lg: 'md:text-lg',
     xl: 'md:text-xl',
   },
-  'fontSize-lg': {
+  'font-size-lg': {
     xs: 'lg:text-xs',
     sm: 'lg:text-sm',
     smd: 'lg:text-smd',
+    alt: 'lg:text-alt',
     base: 'lg:text-base',
     md: 'lg:text-base',
     lg: 'lg:text-lg',
     xl: 'lg:text-xl',
   },
-  'fontSize-xl': {
+  'font-size-xl': {
     xs: 'xl:text-xs',
     sm: 'xl:text-sm',
     smd: 'xl:text-smd',
+    alt: 'xl:text-alt',
     base: 'xl:text-base',
     md: 'xl:text-base',
     lg: 'xl:text-lg',
